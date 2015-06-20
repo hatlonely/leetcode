@@ -42,12 +42,12 @@ public class NextPermutation {
         reverse(nums, idx1 + 1, nums.length - 1);
     }
     
-    public void reverse(int[] nums, int start_index, int end_index) {
-        int middle_index = (start_index + end_index + 1) / 2;
-        for (int i = start_index; i != middle_index; i++) {
+    public void reverse(int[] nums, int beginIndex, int endIndex) {
+        int middle_index = (beginIndex + endIndex + 1) / 2;
+        for (int i = beginIndex; i != middle_index; i++) {
             int temp = nums[i];
-            nums[i] = nums[start_index + end_index - i];
-            nums[start_index + end_index - i] = temp;
+            nums[i] = nums[beginIndex + endIndex - i];
+            nums[beginIndex + endIndex - i] = temp;
         }
     }
     
