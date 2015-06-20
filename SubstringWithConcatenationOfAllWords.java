@@ -20,59 +20,59 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class SubstringWithConcatenationOfAllWords {
-	public List<Integer> findSubstring(String s, String[] words) {
-	    List<Integer> li = new LinkedList<Integer>();
-	    Map<String, Integer> wordTimesMap = new Hashtable<String, Integer>();
-	    for (int i = 0; i < words.length; i++) {
-	    	if (wordTimesMap.containsKey(words[i])) {
-	    		wordTimesMap.put(words[i], wordTimesMap.get(words[i]) + 1);
-	    	} else {
-	    		wordTimesMap.put(words[i], 1);
-	    	}
-	    }
-	    int length = words[0].length();
-	    int totalLength = length * words.length;
-	    
-	    int i = 0;
-	    while (i < s.length() - totalLength + 1) {
-	    	String subStr = s.substring(i, i + totalLength);
-	    	if (isConcatenationOfAllWords(subStr, wordTimesMap, length)) {
-	    		li.add(i);
-	    	}
-	    	i++;
-	    }
-	    
-	    return li;
-	}
-	
-	public boolean isConcatenationOfAllWords(String subStr, Map<String, Integer> wordTimesMap, int length) {
-		Map<String, Integer> map = new Hashtable<String, Integer>();
-		for (int i = 0; i < subStr.length(); i += length) {
-			String word = subStr.substring(i, i + length);
-			if (!wordTimesMap.containsKey(word)) {
-				return false;
-			}
-			
-			if (map.get(word) == wordTimesMap.get(word)) {
-				return false;
-			}
-			
-			if (map.containsKey(word)) {
-				map.put(word, map.get(word) + 1);
-			} else {
-				map.put(word, 1);
-			}
-		}
-		return true;
-	}
-	
-	public static void main(String[] args) {
-		SubstringWithConcatenationOfAllWords swoaw = new SubstringWithConcatenationOfAllWords();
-		System.out.println(swoaw.findSubstring("barfoothefoobarman", new String[]{"foo", "bar"}));
-		System.out.println(swoaw.findSubstring("a", new String[]{"a"}));
-		System.out.println(swoaw.findSubstring("aaa", new String[]{"a", "b"}));
-		System.out.println(swoaw.findSubstring(
-				"lingmindraboofooowingdingbarrwingmonkeypoundcake",
-				new String[]{"fooo","barr","wing","ding","wing"}));
-	}
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> li = new LinkedList<Integer>();
+        Map<String, Integer> wordTimesMap = new Hashtable<String, Integer>();
+        for (int i = 0; i < words.length; i++) {
+            if (wordTimesMap.containsKey(words[i])) {
+                wordTimesMap.put(words[i], wordTimesMap.get(words[i]) + 1);
+            } else {
+                wordTimesMap.put(words[i], 1);
+            }
+        }
+        int length = words[0].length();
+        int totalLength = length * words.length;
+        
+        int i = 0;
+        while (i < s.length() - totalLength + 1) {
+            String subStr = s.substring(i, i + totalLength);
+            if (isConcatenationOfAllWords(subStr, wordTimesMap, length)) {
+                li.add(i);
+            }
+            i++;
+        }
+        
+        return li;
+    }
+    
+    public boolean isConcatenationOfAllWords(String subStr, Map<String, Integer> wordTimesMap, int length) {
+        Map<String, Integer> map = new Hashtable<String, Integer>();
+        for (int i = 0; i < subStr.length(); i += length) {
+            String word = subStr.substring(i, i + length);
+            if (!wordTimesMap.containsKey(word)) {
+                return false;
+            }
+            
+            if (map.get(word) == wordTimesMap.get(word)) {
+                return false;
+            }
+            
+            if (map.containsKey(word)) {
+                map.put(word, map.get(word) + 1);
+            } else {
+                map.put(word, 1);
+            }
+        }
+        return true;
+    }
+    
+    public static void main(String[] args) {
+        SubstringWithConcatenationOfAllWords swoaw = new SubstringWithConcatenationOfAllWords();
+        System.out.println(swoaw.findSubstring("barfoothefoobarman", new String[]{"foo", "bar"}));
+        System.out.println(swoaw.findSubstring("a", new String[]{"a"}));
+        System.out.println(swoaw.findSubstring("aaa", new String[]{"a", "b"}));
+        System.out.println(swoaw.findSubstring(
+                "lingmindraboofooowingdingbarrwingmonkeypoundcake",
+                new String[]{"fooo","barr","wing","ding","wing"}));
+    }
 }

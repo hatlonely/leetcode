@@ -14,39 +14,39 @@ package leetcode;
 // return [3, 4].
 
 public class SearchForARange {
-	public int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] nums, int target) {
         int idx1 = 0;
         int idx2 = nums.length - 1;
         
         while (idx1 <= idx2) {
-        	int mid = (idx1 + idx2) / 2;
-        	if (nums[mid] < target) {
-        		idx1 = mid + 1;
-        	} else if (nums[mid] > target) {
-        		idx2 = mid - 1;
-        	} else {
-        		idx1 = idx2 = mid;
-        		break;
-        	}
+            int mid = (idx1 + idx2) / 2;
+            if (nums[mid] < target) {
+                idx1 = mid + 1;
+            } else if (nums[mid] > target) {
+                idx2 = mid - 1;
+            } else {
+                idx1 = idx2 = mid;
+                break;
+            }
         }
         
         if (idx1 > idx2) {
-        	return new int[]{-1, -1};
+            return new int[]{-1, -1};
         }
         
         while (idx1 >= 1 && nums[idx1 - 1] == target) {
-        	idx1--;
+            idx1--;
         }
         while (idx2 < nums.length - 1 && nums[idx2 + 1] == target) {
-        	idx2++;
+            idx2++;
         }
         
         return new int[]{idx1, idx2};
     }
-	
-	public static void main(String[] args) {
-		SearchForARange searchForARange = new SearchForARange();
-		int[] result = searchForARange.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 110);
-		System.out.println(result[0] + ", " + result[1]);
-	}
+    
+    public static void main(String[] args) {
+        SearchForARange searchForARange = new SearchForARange();
+        int[] result = searchForARange.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 110);
+        System.out.println(result[0] + ", " + result[1]);
+    }
 }
