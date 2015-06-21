@@ -30,14 +30,23 @@ public class CombinationSum {
         return result;
     }
     
-    public void combinationSumProcess(int[] candidates, int target, int idx, 
+    /**
+     * 随便选一个数num，然后递归地选择和为target - num的数
+     * @param sortedCandidates 候选数，有序
+     * @param target 和
+     * @param index 当前候选数下标
+     * @param list 当前已选数列表
+     * @param result list结果集合
+     */
+    public void combinationSumProcess(int[] sortedCandidates, int target, int index, 
             List<Integer> list, List<List<Integer>> result) {
-        for (; idx < candidates.length; idx++) {
+        for (; index < sortedCandidates.length; index++) {
             List<Integer> newList = new LinkedList<Integer>(list);
-            newList.add(candidates[idx]);
-            if (target - candidates[idx] > 0) {
-                combinationSumProcess(candidates, target - candidates[idx], idx, newList, result);
-            } else if (target - candidates[idx] == 0) {
+            newList.add(sortedCandidates[index]);
+            if (target - sortedCandidates[index] > 0) {
+                combinationSumProcess(sortedCandidates, target - sortedCandidates[index],
+                        index, newList, result);
+            } else if (target - sortedCandidates[index] == 0) {
                 result.add(newList);
                 break;
             } else {
