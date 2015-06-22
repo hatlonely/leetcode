@@ -13,9 +13,11 @@ public class MultiplyStrings {
     public String multiply(String num1, String num2) {
         int[] n1 = new int[num1.length()];
         int[] n2 = new int[num2.length()];
-        int[] n3 = new int[num1.length() + num2.length()];
+        int[] n3 = new int[num1.length() + num2.length()];  // 结果
         Arrays.fill(n3, 0);
         
+        // 将字符串转成数字，低位放前面，高位放后面
+        // 如："123" => [3, 2, 1]
         for (int i = 0; i < num1.length(); i++) {
             n1[n1.length - i - 1] = num1.charAt(i) - '0';
         }
@@ -23,6 +25,7 @@ public class MultiplyStrings {
             n2[n2.length - i - 1] = num2.charAt(i) - '0';
         }
         
+        // 计算
         int carry = 0;
         for (int i = 0; i < n1.length; i++) {
             for (int j = 0; j < n2.length; j++) {
@@ -34,22 +37,24 @@ public class MultiplyStrings {
             carry = 0;
         }
         
+        // 将结果n3转成字符串
+        // 去掉前面的0
         int idx = n3.length - 1;
         while (idx >= 0 && n3[idx] == 0) {
             idx--;
         }
         
-        String num = "";
+        String num3 = "";
         while (idx >= 0) {
-            num += Integer.toString(n3[idx]);
+            num3 += Integer.toString(n3[idx]);
             idx--;
         }
         
-        if (num.equals("")) {
+        if (num3.equals("")) {
             return "0";
         }
         
-        return num;
+        return num3;
     }
     
     public void print(int[] nums) {
