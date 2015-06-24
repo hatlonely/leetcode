@@ -1,5 +1,3 @@
-package leetcode;
-
 // 25 Reverse Nodes in k-Group
 // https://leetcode.com/problems/reverse-nodes-in-k-group/
 //
@@ -13,6 +11,8 @@ package leetcode;
 // For k = 2, you should return: 2->1->4->3->5
 // For k = 3, you should return: 3->2->1->4->5
 
+package leetcode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -21,9 +21,9 @@ public class ReverseNodesInKGroup {
         if (head == null || head.next == null || k == 1) {
             return head;
         }
-        
-        ListNode node1 = head;          // Group的左边节点
-        ListNode node2 = head;          // Group的右边节点
+
+        ListNode node1 = head; // Group的左边节点
+        ListNode node2 = head; // Group的右边节点
         for (int i = 1; i < k; i++) {
             node2 = node2.next;
             if (node2 == null) {
@@ -31,9 +31,9 @@ public class ReverseNodesInKGroup {
             }
         }
         head = node2;
-        
+
         while (true) {
-            ListNode node3 = node2.next;    // 下一个Group的左边节点
+            ListNode node3 = node2.next; // 下一个Group的左边节点
             // 逆置node1~node2
             ListNode temp1 = node1;
             ListNode temp2 = temp1.next;
@@ -43,13 +43,13 @@ public class ReverseNodesInKGroup {
                 temp1 = temp2;
                 temp2 = temp3;
             }
-            
+
             // 当前Group已经是最后一个Group
             if (node3 == null) {
                 node1.next = null;
                 break;
             }
-            ListNode node4 = node3.next;    // 下一个Group的右边节点
+            ListNode node4 = node3.next; // 下一个Group的右边节点
             for (int i = 2; i < k; i++) {
                 if (node4 == null) {
                     break;
@@ -62,14 +62,14 @@ public class ReverseNodesInKGroup {
                 break;
             }
             node1.next = node4;
-            
+
             node1 = node3;
             node2 = node4;
         }
-        
+
         return head;
     }
-    
+
     public static void main(String[] args) {
         ListNode head = new ListNode(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8)));
         ReverseNodesInKGroup reverseNodesInKGroup = new ReverseNodesInKGroup();

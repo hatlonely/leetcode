@@ -1,10 +1,10 @@
-package leetcode;
-
 // 21 Merge Two Sorted Lists
 // https://leetcode.com/problems/merge-two-sorted-lists/
 //
-// Merge two sorted linked lists and return it as a new list. 
+// Merge two sorted linked lists and return it as a new list.
 // The new list should be made by splicing together the nodes of the first two lists.
+
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,10 +17,10 @@ public class MergeTwoSortedLists {
         if (l2 == null) {
             return l1;
         }
-        
-        ListNode node1 = null;  // 第一个元素较小的list
-        ListNode node2 = null;  // 第一个元素较大的list
-        ListNode ln = null;     // 返回的ListNode
+
+        ListNode node1 = null; // 第一个元素较小的list
+        ListNode node2 = null; // 第一个元素较大的list
+        ListNode ln = null; // 返回的ListNode
         if (l1.val < l2.val) {
             node1 = l1;
             node2 = l2;
@@ -29,7 +29,7 @@ public class MergeTwoSortedLists {
             node2 = l1;
         }
         ln = node1;
-        
+
         ListNode temp = null;
         while (true) {
             // node1的元素 < node2的元素
@@ -44,7 +44,7 @@ public class MergeTwoSortedLists {
                 node1 = node1.next;
                 temp.next = node2;
             }
-            
+
             // node2的元素 < node1的元素
             while (node2.next != null && node2.next.val < node1.val) {
                 node2 = node2.next;
@@ -58,10 +58,10 @@ public class MergeTwoSortedLists {
                 temp.next = node1;
             }
         }
-        
-        return ln; 
+
+        return ln;
     }
-    
+
     public static void main(String[] args) {
         MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
         ListNode ln1 = new ListNode(new ArrayList<Integer>(Arrays.asList(1, 4, 7, 9)));

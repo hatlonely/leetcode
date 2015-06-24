@@ -1,14 +1,14 @@
-package leetcode;
-
 // 32 Longest Valid Parentheses
 // https://leetcode.com/problems/longest-valid-parentheses/
-// Given a string containing just the characters '(' and ')', 
+// Given a string containing just the characters '(' and ')',
 // find the length of the longest valid (well-formed) parentheses substring.
 //
 // For "(()", the longest valid parentheses substring is "()", which has length = 2.
 //
 // Another example is ")()())", where the longest valid parentheses substring is "()()",
 // which has length = 4.
+
+package leetcode;
 
 import java.util.Stack;
 
@@ -18,11 +18,11 @@ public class LongestValidParentheses {
     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<Integer>();
         boolean[] result = new boolean[s.length()];
-        
+
         for (int i = 0; i < result.length; i++) {
             result[i] = false;
         }
-        
+
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 stack.push(i);
@@ -32,7 +32,7 @@ public class LongestValidParentheses {
                 stack.pop();
             }
         }
-        
+
         int max = 0;
         int idx = 0;
         while (idx < result.length) {
@@ -46,10 +46,10 @@ public class LongestValidParentheses {
             }
             idx++;
         }
-        
+
         return max;
     }
-    
+
     public static void main(String[] args) {
         LongestValidParentheses longestValidParentheses = new LongestValidParentheses();
         System.out.println(longestValidParentheses.longestValidParentheses(")()())") == 4);

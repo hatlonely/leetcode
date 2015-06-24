@@ -1,5 +1,3 @@
-package leetcode;
-
 // 118 Pascal's Triangle
 // https://leetcode.com/problems/pascals-triangle/
 //
@@ -16,8 +14,10 @@ package leetcode;
 // [1,4,6,4,1]
 // ]
 
-import java.util.List;
+package leetcode;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
@@ -36,12 +36,12 @@ public class PascalTriangle {
                 new_li.add(li.get(j) + li.get(j + 1));
             }
             new_li.add(1);
-            
+
             lli.add(new_li);
         }
         return lli;
     }
-    
+
     public static void main(String args[]) {
         PascalTriangle solution = new PascalTriangle();
         System.out.println(solution.generate(1));

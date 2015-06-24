@@ -1,5 +1,3 @@
-package leetcode;
-
 // 38 Count and Say
 // https://leetcode.com/problems/count-and-say/
 //
@@ -13,6 +11,8 @@ package leetcode;
 //
 // Note: The sequence of integers will be represented as a string.
 
+package leetcode;
+
 public class CountAndSay {
     public String countAndSay(int n) {
         String string = "1";
@@ -21,15 +21,17 @@ public class CountAndSay {
             int len = 0;
             while (len < string.length()) {
                 int idx = len;
-                while (++len < string.length() && string.charAt(idx) == string.charAt(len));
+                while (++len < string.length() && string.charAt(idx) == string.charAt(len)) {
+                    ;
+                }
                 temp += Integer.toString(len - idx) + string.charAt(idx);
             }
-            
+
             string = temp;
         }
         return string;
     }
-    
+
     public static void main(String[] args) {
         CountAndSay countAndSay = new CountAndSay();
         for (int i = 0; i < 10; i++) {

@@ -1,5 +1,3 @@
-package leetcode;
-
 // 33 Search in Rotated Sorted Array
 // https://leetcode.com/problems/search-in-rotated-sorted-array/
 //
@@ -8,6 +6,8 @@ package leetcode;
 // You are given a target value to search. If found in the array return its index,
 // otherwise return -1.
 // You may assume no duplicate exists in the array.
+
+package leetcode;
 
 public class SearchInRotatedSortedArray {
     public int search(int[] nums, int target) {
@@ -26,7 +26,7 @@ public class SearchInRotatedSortedArray {
             return binary_search(nums, search_point + 1, nums.length - 1, target);
         }
     }
-    
+
     // 二分查找轴值
     public int binary_search_point(int[] nums, int beginIndex, int endIndex) {
         while (beginIndex < endIndex) {
@@ -48,10 +48,10 @@ public class SearchInRotatedSortedArray {
                 return middleIndex;
             }
         }
-        
+
         return -1;
     }
-    
+
     // 二分查找
     public int binary_search(int[] nums, int beginIndex, int endIndex, int target) {
         while (beginIndex <= endIndex) {
@@ -64,14 +64,14 @@ public class SearchInRotatedSortedArray {
                 return middleIndex;
             }
         }
-        
+
         return -1;
     }
-    
+
     public static void main(String[] args) {
-        SearchInRotatedSortedArray searchInRotatedSortedArray= new SearchInRotatedSortedArray();
-        System.out.println(searchInRotatedSortedArray.search(new int[]{3},  3) == 0);
-        System.out.println(searchInRotatedSortedArray.search(new int[]{1, 2, 5},  5) == 2);
-        System.out.println(searchInRotatedSortedArray.search(new int[]{2, 3, 4, 1},  3) == 1);
+        SearchInRotatedSortedArray searchInRotatedSortedArray = new SearchInRotatedSortedArray();
+        System.out.println(searchInRotatedSortedArray.search(new int[] { 3 }, 3) == 0);
+        System.out.println(searchInRotatedSortedArray.search(new int[] { 1, 2, 5 }, 5) == 2);
+        System.out.println(searchInRotatedSortedArray.search(new int[] { 2, 3, 4, 1 }, 3) == 1);
     }
 }

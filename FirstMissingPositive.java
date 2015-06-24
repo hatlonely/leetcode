@@ -1,5 +1,3 @@
-package leetcode;
-
 // 41 First Missing Positive
 // https://leetcode.com/problems/first-missing-positive/
 //
@@ -11,8 +9,10 @@ package leetcode;
 //
 // Your algorithm should run in O(n) time and uses constant space.
 
+package leetcode;
+
 public class FirstMissingPositive {
-    public int firstMissingPositive(int[] nums) {        
+    public int firstMissingPositive(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             while (i != nums[i] - 1) {
                 // 负数
@@ -37,25 +37,25 @@ public class FirstMissingPositive {
                 nums[temp - 1] = temp;
             }
         }
-        
+
         // 遍历数组，如果位置k不满足nums[k] = k + 1，则k + 1就是丢失的数
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != i + 1) {
                 return i + 1;
             }
         }
-        
+
         // 如果之前的数都有，则丢失的数为下一个数，即数组长度 + 1
         return nums.length + 1;
     }
-    
+
     public static void main(String[] args) {
         FirstMissingPositive firstMissingPositive = new FirstMissingPositive();
-        System.out.println(firstMissingPositive.firstMissingPositive(new int[]{3, 4, -1, 1}));
-        System.out.println(firstMissingPositive.firstMissingPositive(new int[]{}));
-        System.out.println(firstMissingPositive.firstMissingPositive(new int[]{2}));
-        System.out.println(firstMissingPositive.firstMissingPositive(new int[]{2, 1, 0}));
-        System.out.println(firstMissingPositive.firstMissingPositive(new int[]{1, 1}));
+        System.out.println(firstMissingPositive.firstMissingPositive(new int[] { 3, 4, -1, 1 }));
+        System.out.println(firstMissingPositive.firstMissingPositive(new int[] {}));
+        System.out.println(firstMissingPositive.firstMissingPositive(new int[] { 2 }));
+        System.out.println(firstMissingPositive.firstMissingPositive(new int[] { 2, 1, 0 }));
+        System.out.println(firstMissingPositive.firstMissingPositive(new int[] { 1, 1 }));
 
     }
 }

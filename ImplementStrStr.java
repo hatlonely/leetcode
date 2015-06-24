@@ -1,11 +1,11 @@
-package leetcode;
-
 // 28 Implement strStr()
 // https://leetcode.com/problems/implement-strstr/
 // Implement strStr().
 //
 // Returns the index of the first occurrence of needle in haystack,
 // or -1 if needle is not part of haystack
+
+package leetcode;
 
 public class ImplementStrStr {
     // 字符串匹配sunday算法
@@ -25,8 +25,8 @@ public class ImplementStrStr {
             if (isMatch) {
                 return i;
             }
-            
-            int k = i + needle.length();    // 获取下一个字符
+
+            int k = i + needle.length(); // 获取下一个字符
             if (k > haystack.length() - 1) {
                 return -1;
             }
@@ -44,14 +44,14 @@ public class ImplementStrStr {
                 i += needle.length() + 1;
             }
         }
-        
+
         // 匹配字符串为空串，返回0
         if (needle.length() == 0) {
             return 0;
         }
         return -1;
     }
-    
+
     public static void main(String[] args) {
         ImplementStrStr implementStrStr = new ImplementStrStr();
         System.out.println(implementStrStr.strStr("abcdefghijklmn", "def") == 3);

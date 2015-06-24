@@ -1,7 +1,3 @@
-package leetcode;
-
-import java.util.Stack;
-
 // 44 Wildcard Matching
 // https://leetcode.com/problems/wildcard-matching/
 //
@@ -23,6 +19,10 @@ import java.util.Stack;
 // isMatch("aa", "a*") → true
 // isMatch("ab", "?*") → true
 // isMatch("aab", "c*a*b") → false
+
+package leetcode;
+
+import java.util.Stack;
 
 public class WildcardMatching {
     public boolean isMatch(String s, String p) {
