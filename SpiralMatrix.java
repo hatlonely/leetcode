@@ -31,7 +31,7 @@ public class SpiralMatrix {
         int columnLen = matrix[0].length;
         int len = (rowLen < columnLen ? rowLen : columnLen) + 1;
 
-        List<Integer> result = new ArrayList<Integer>(rowLen * rowLen);
+        List<Integer> result = new ArrayList<Integer>(rowLen * columnLen);
 
         for (int i = 0; i < len / 2; i++) {
             for (int j = i; j < columnLen - i - 1; j++) {
