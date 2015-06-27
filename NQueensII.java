@@ -11,6 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class NQueensII {
+    // 包装一下int，这样在传参的时候能类似引用传进去
     private class Data {
         public int i = 0;
     }
@@ -32,6 +33,16 @@ public class NQueensII {
         return total.i;
     }
 
+    /**
+     *
+     * 类似全排列，增加不能再同一斜线
+     *
+     * @param selected 已选数列表
+     * @param unselected 未选数列表
+     * @param oblique1 斜线1
+     * @param oblique2 斜线2
+     * @param total 结果
+     */
     public void totalNQueuesProcess(List<Integer> selected, List<Integer> unselected,
             boolean[] oblique1, boolean[] oblique2, Data total) {
         if (unselected.isEmpty()) {
