@@ -13,41 +13,41 @@ public class SimplifyPath {
     public String simplifyPath(String path) {
         StringBuffer buffer = new StringBuffer(path);
 
-        int idx1 = 0;
-        int idx2 = 0;
-        while (idx2 < buffer.length()) {
-            while (idx2 < buffer.length() && buffer.charAt(idx2) == '/') {
-                idx2++;
+        int bufferIndex = 0;
+        int pathIndex = 0;
+        while (pathIndex < buffer.length()) {
+            while (pathIndex < buffer.length() && buffer.charAt(pathIndex) == '/') {
+                pathIndex++;
             }
-            int pos = idx2;
-            while (idx2 < buffer.length() && buffer.charAt(idx2) != '/') {
-                idx2++;
+            int start = pathIndex;
+            while (pathIndex < buffer.length() && buffer.charAt(pathIndex) != '/') {
+                pathIndex++;
             }
-            if (idx2 - pos == 1 && buffer.charAt(pos) == '.') {
+            if (pathIndex - start == 1 && buffer.charAt(start) == '.') {
                 // nothing to do
-            } else if (idx2 - pos == 2 && buffer.charAt(pos) == '.'
-                    && buffer.charAt(pos + 1) == '.') {
-                while (buffer.charAt(idx1) != '/') {
-                    idx1--;
+            } else if (pathIndex - start == 2 && buffer.charAt(start) == '.'
+                    && buffer.charAt(start + 1) == '.') {
+                while (buffer.charAt(bufferIndex) != '/') {
+                    bufferIndex--;
                 }
-                if (idx1 > 0) {
-                    idx1--;
+                if (bufferIndex > 0) {
+                    bufferIndex--;
                 }
             } else {
-                if (buffer.charAt(idx1) != '/') {
-                    buffer.setCharAt(++idx1, '/');
+                if (buffer.charAt(bufferIndex) != '/') {
+                    buffer.setCharAt(++bufferIndex, '/');
                 }
-                for (int i = pos; i < idx2; i++) {
-                    buffer.setCharAt(++idx1, buffer.charAt(i));
+                for (int i = start; i < pathIndex; i++) {
+                    buffer.setCharAt(++bufferIndex, buffer.charAt(i));
                 }
             }
-            idx2++;
+            pathIndex++;
         }
 
-        if (buffer.charAt(idx1) == '/' && idx1 > 0) {
-            return buffer.substring(0, idx1);
+        if (buffer.charAt(bufferIndex) == '/' && bufferIndex > 0) {
+            return buffer.substring(0, bufferIndex);
         }
-        return buffer.substring(0, idx1 + 1);
+        return buffer.substring(0, bufferIndex + 1);
     }
 
     public static void main(String[] args) {
