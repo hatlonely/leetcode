@@ -24,7 +24,8 @@ MAIN_NAMESPACE(roman_to_integer)
 MAIN_NAMESPACE(longest_common_prefix)
 MAIN_NAMESPACE(three_sum)
 MAIN_NAMESPACE(three_sum_closest)
+MAIN_NAMESPACE(letter_combinations_of_a_phone_number)
 
 int main(int argc, const char *argv[]) {
-    return three_sum_closest::main(argc, argv);
+    return letter_combinations_of_a_phone_number::main(argc, argv);
 }
