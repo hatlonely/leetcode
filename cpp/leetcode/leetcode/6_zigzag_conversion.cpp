@@ -1,5 +1,5 @@
 //
-//  6_ zigzag_conversion.cpp
+//  6_zigzag_conversion.cpp
 //  leetcode
 //
 //  Created by hatlonely on 16/1/11.
@@ -36,6 +36,7 @@ public:
         }
         
         int mod = (n - 1) * 2;
+        
         {
             int i = 0;
             while (true) {
