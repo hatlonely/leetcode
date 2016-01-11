@@ -14,7 +14,8 @@ MAIN_NAMESPACE(longest_substring_without_repeating_characters)
 MAIN_NAMESPACE(median_of_two_sorted_arrays)
 MAIN_NAMESPACE(longest_palindromic_substring)
 MAIN_NAMESPACE(zigzag_conversion)
+MAIN_NAMESPACE(reverse_integer)
 
 int main(int argc, const char *argv[]) {
-    return zigzag_conversion::main(argc, argv);
+    return reverse_integer::main(argc, argv);
 }
