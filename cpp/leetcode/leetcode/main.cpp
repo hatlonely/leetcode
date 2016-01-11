@@ -11,7 +11,8 @@
 MAIN_NAMESPACE(two_sum)
 MAIN_NAMESPACE(add_two_numbers)
 MAIN_NAMESPACE(longest_substring_without_repeating_characters)
+MAIN_NAMESPACE(median_of_two_sorted_arrays)
 
 int main(int argc, const char *argv[]) {
-    return longest_substring_without_repeating_characters::main(argc, argv);
+    return median_of_two_sorted_arrays::main(argc, argv);
 }
