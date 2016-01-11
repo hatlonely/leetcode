@@ -20,7 +20,11 @@ MAIN_NAMESPACE(palindrome_number)
 MAIN_NAMESPACE(regular_expression_matching)
 MAIN_NAMESPACE(container_with_most_water)
 MAIN_NAMESPACE(integer_to_roman)
+MAIN_NAMESPACE(roman_to_integer)
+MAIN_NAMESPACE(longest_common_prefix)
+MAIN_NAMESPACE(three_sum)
+MAIN_NAMESPACE(three_sum_closest)
 
 int main(int argc, const char *argv[]) {
-    return integer_to_roman::main(argc, argv);
+    return three_sum_closest::main(argc, argv);
 }
