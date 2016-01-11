@@ -53,6 +53,7 @@ int main(int argc, const char *argv[]) {
     assert(solution.lengthOfLongestSubstring("abcabcbb") == 3);
     assert(solution.lengthOfLongestSubstring("bbbb") == 1);
     assert(solution.lengthOfLongestSubstring("c") == 1);
+
     return 0;
 }
 

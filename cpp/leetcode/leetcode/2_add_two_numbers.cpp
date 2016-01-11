@@ -107,24 +107,25 @@ int main(int argc, const char *argv[]) {
         return (node1 == nullptr && node2 == nullptr);
     };
     
-    auto test = [=](std::initializer_list<int> li1,
+    auto test = [=](Solution& solution,
+                    std::initializer_list<int> li1,
                     std::initializer_list<int> li2,
-                    std::initializer_list<int> li,
-                    Solution& solution) {
+                    std::initializer_list<int> li) -> bool {
         ListNode *node1 = create_list(li1);
         ListNode *node2 = create_list(li2);
         ListNode *expected = create_list(li);
         ListNode *result = solution.addTwoNumbers(node1, node2);
-        assert(equals_list(result, expected));
+        bool is_equal = equals_list(result, expected);
         delete_list(node1);
         delete_list(node2);
         delete_list(expected);
         delete_list(result);
+        return is_equal;
     };
     
     {
-        test({2, 4, 3}, {5, 6, 4}, {7, 0, 8}, solution);
-        test({5}, {5}, {0, 1}, solution);
+        assert(test(solution, {2, 4, 3}, {5, 6, 4}, {7, 0, 8}));
+        assert(test(solution, {5}, {5}, {0, 1}));
     }
     
     return 0;

@@ -66,14 +66,12 @@ int main(int argc, const char *argv[]) {
         return d < 1e-10 && d > -1e-10;
     };
 
-    
     assert(test(solution, {1, 2, 3}, {4, 5, 6}, 3.5));
     assert(test(solution, {}, {1}, 1));
     assert(test(solution, {}, {2, 3}, 2.5));
     assert(test(solution, {1, 2}, {1, 2}, 1.5));
     assert(test(solution, {2}, {1}, 1.5));
     assert(test(solution, {1, 2}, {1, 2, 3}, 2));
-    
     
     return 0;
 }
