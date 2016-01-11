@@ -15,7 +15,10 @@ MAIN_NAMESPACE(median_of_two_sorted_arrays)
 MAIN_NAMESPACE(longest_palindromic_substring)
 MAIN_NAMESPACE(zigzag_conversion)
 MAIN_NAMESPACE(reverse_integer)
+MAIN_NAMESPACE(string_to_integer)
+MAIN_NAMESPACE(palindrome_number)
+MAIN_NAMESPACE(regular_expression_matching)
 
 int main(int argc, const char *argv[]) {
-    return reverse_integer::main(argc, argv);
+    return regular_expression_matching::main(argc, argv);
 }
