@@ -29,7 +29,8 @@ MAIN_NAMESPACE(four_sum)
 MAIN_NAMESPACE(remove_nth_node_from_end_of_list)
 MAIN_NAMESPACE(valid_parentheses)
 MAIN_NAMESPACE(merge_two_sorted_lists_my_submissions_question)
+MAIN_NAMESPACE(generate_parentheses)
 
 int main(int argc, const char *argv[]) {
-    return merge_two_sorted_lists_my_submissions_question::main(argc, argv);
+    return generate_parentheses::main(argc, argv);
 }
