@@ -27,7 +27,9 @@ MAIN_NAMESPACE(three_sum_closest)
 MAIN_NAMESPACE(letter_combinations_of_a_phone_number)
 MAIN_NAMESPACE(four_sum)
 MAIN_NAMESPACE(remove_nth_node_from_end_of_list)
+MAIN_NAMESPACE(valid_parentheses)
+MAIN_NAMESPACE(merge_two_sorted_lists_my_submissions_question)
 
 int main(int argc, const char *argv[]) {
-    return remove_nth_node_from_end_of_list::main(argc, argv);
+    return merge_two_sorted_lists_my_submissions_question::main(argc, argv);
 }
