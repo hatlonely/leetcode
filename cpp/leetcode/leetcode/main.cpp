@@ -26,7 +26,8 @@ MAIN_NAMESPACE(three_sum)
 MAIN_NAMESPACE(three_sum_closest)
 MAIN_NAMESPACE(letter_combinations_of_a_phone_number)
 MAIN_NAMESPACE(four_sum)
+MAIN_NAMESPACE(remove_nth_node_from_end_of_list)
 
 int main(int argc, const char *argv[]) {
-    return four_sum::main(argc, argv);
+    return remove_nth_node_from_end_of_list::main(argc, argv);
 }
