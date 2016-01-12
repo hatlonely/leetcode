@@ -24,21 +24,16 @@ namespace remove_nth_node_from_end_of_list {
 
 class Solution {
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode *node1 = head;
+    ListNode *removeNthFromEnd(ListNode *head, int n) {
+        ListNode prev(0);
+        prev.next = head;
+        ListNode *node1 = &prev;
         ListNode *node2 = head;
         
         for (int i = 0; i < n; i++) {
             node2 = node2->next;
         }
-        
-        if (node2 == nullptr) {
-            head = head->next;
-            delete node1;
-            return head;
-        }
-        
-        node2 = node2->next;
+
         while (node2 != nullptr) {
             node1 = node1->next;
             node2 = node2->next;
@@ -48,7 +43,7 @@ public:
         node1->next = node2->next;
         delete node2;
         
-        return head;
+        return prev.next;
     }
 };
 

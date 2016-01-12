@@ -10,22 +10,20 @@
 #include "list_node.h"
 
 ListNode *create_list(std::initializer_list<int> li) {
-    ListNode *head = new ListNode(0);
-    ListNode *node = head;
+    ListNode prev(0);
+    ListNode *node = &prev;
     for (int i: li) {
         node->next = new ListNode(i);
         node = node->next;
     }
-    node = head->next;
-    delete head;
-    return node;
+    return prev.next;
 };
 
 void delete_list(ListNode *node) {
     while (node != nullptr) {
-        ListNode *temp = node;
-        node = node->next;
-        delete temp;
+        ListNode *next = node->next;
+        delete node;
+        node = next;
     }
 };
 

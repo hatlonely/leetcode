@@ -22,8 +22,8 @@ namespace add_two_numbers {
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *node1, ListNode* node2) {
-        ListNode *head = new ListNode(0);
-        ListNode *node = head;
+        ListNode prev(0);
+        ListNode *node = &prev;
         int carry = 0;
         while (node1 != nullptr && node2 != nullptr) {
             int sum = node1->val + node2->val + carry;
@@ -53,10 +53,8 @@ public:
         if (carry) {
             node->next = new ListNode(carry);
         }
-        
-        node = head->next;
-        delete head;
-        return node;
+
+        return prev.next;
     }
 };
 
