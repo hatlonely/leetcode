@@ -29,7 +29,7 @@ void delete_list(ListNode *node) {
 
 void show_list(ListNode *node) {
     while (node != nullptr) {
-        std::cout << node->val << " -> ";
+        std::cout << node->val << ", ";
         node = node->next;
     }
     std::cout << std::endl;

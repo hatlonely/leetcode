@@ -32,7 +32,8 @@ MAIN_NAMESPACE(merge_two_sorted_lists_my_submissions_question)
 MAIN_NAMESPACE(generate_parentheses)
 MAIN_NAMESPACE(merge_k_sorted_lists)
 MAIN_NAMESPACE(swap_nodes_in_pairs)
+MAIN_NAMESPACE(reverse_nodes_in_k_group)
 
 int main(int argc, const char *argv[]) {
-    return add_two_numbers::main(argc, argv);
+    return reverse_nodes_in_k_group::main(argc, argv);
 }
