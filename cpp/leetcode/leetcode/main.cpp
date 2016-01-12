@@ -33,7 +33,10 @@ MAIN_NAMESPACE(generate_parentheses)
 MAIN_NAMESPACE(merge_k_sorted_lists)
 MAIN_NAMESPACE(swap_nodes_in_pairs)
 MAIN_NAMESPACE(reverse_nodes_in_k_group)
+MAIN_NAMESPACE(remove_duplicates_from_sorted_array)
+MAIN_NAMESPACE(remove_element)
+MAIN_NAMESPACE(implement_strstr)
 
 int main(int argc, const char *argv[]) {
-    return reverse_nodes_in_k_group::main(argc, argv);
+    return implement_strstr::main(argc, argv);
 }
