@@ -15,14 +15,9 @@
 
 #include <iostream>
 #include <cassert>
+#include "list_node.h"
 
 namespace add_two_numbers {
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
     
 class Solution {
 public:
@@ -66,51 +61,12 @@ public:
 };
 
 int main(int argc, const char *argv[]) {
-    Solution solution;
-    auto create_list = [](std::initializer_list<int> li) -> ListNode * {
-        ListNode *head = new ListNode(0);
-        ListNode *node = head;
-        for (int i: li) {
-            node->next = new ListNode(i);
-            node = node->next;
-        }
-        node = head->next;
-        delete head;
-        return node;
-    };
     
-    auto delete_list = [](ListNode *node) {
-        while (node != nullptr) {
-            ListNode *temp = node;
-            node = node->next;
-            delete temp;
-        }
-    };
     
-    auto show_list = [](ListNode *node) {
-        while (node != nullptr) {
-            std::cout << node->val << " -> ";
-            node = node->next;
-        }
-        std::cout << std::endl;
-    };
-    
-    auto equals_list = [](ListNode *node1, ListNode *node2) -> bool {
-        while (node1 != nullptr && node2 != nullptr) {
-            if (node1->val != node2->val) {
-                return false;
-            }
-            node1 = node1->next;
-            node2 = node2->next;
-        }
-        
-        return (node1 == nullptr && node2 == nullptr);
-    };
-    
-    auto test = [=](Solution& solution,
-                    std::initializer_list<int> li1,
-                    std::initializer_list<int> li2,
-                    std::initializer_list<int> li) -> bool {
+    auto test = [](std::initializer_list<int> li1,
+                   std::initializer_list<int> li2,
+                   std::initializer_list<int> li) -> bool {
+        Solution solution;
         ListNode *node1 = create_list(li1);
         ListNode *node2 = create_list(li2);
         ListNode *expected = create_list(li);
@@ -124,8 +80,8 @@ int main(int argc, const char *argv[]) {
     };
     
     {
-        assert(test(solution, {2, 4, 3}, {5, 6, 4}, {7, 0, 8}));
-        assert(test(solution, {5}, {5}, {0, 1}));
+        assert(test({2, 4, 3}, {5, 6, 4}, {7, 0, 8}));
+        assert(test({5}, {5}, {0, 1}));
     }
     
     return 0;

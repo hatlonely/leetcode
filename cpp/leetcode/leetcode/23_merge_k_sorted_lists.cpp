@@ -11,7 +11,7 @@
 
 #include <vector>
 #include <queue>
-#include "list_node.hpp"
+#include "list_node.h"
 
 namespace merge_k_sorted_lists {
     

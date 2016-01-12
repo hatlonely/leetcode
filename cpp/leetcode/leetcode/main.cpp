@@ -33,5 +33,5 @@ MAIN_NAMESPACE(generate_parentheses)
 MAIN_NAMESPACE(merge_k_sorted_lists)
 
 int main(int argc, const char *argv[]) {
-    return merge_k_sorted_lists::main(argc, argv);
+    return add_two_numbers::main(argc, argv);
 }

@@ -11,14 +11,9 @@
 
 #include <iostream>
 #include <cassert>
+#include "list_node.h"
 
 namespace merge_two_sorted_lists_my_submissions_question {
-    
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
 
 class Solution {
 public:
@@ -74,47 +69,7 @@ public:
 };
 
 int main(int argc, const char *argv[]) {
-    auto create_list = [](std::initializer_list<int> li) -> ListNode * {
-        ListNode *head = new ListNode(0);
-        ListNode *node = head;
-        for (int i: li) {
-            node->next = new ListNode(i);
-            node = node->next;
-        }
-        node = head->next;
-        delete head;
-        return node;
-    };
-    
-    auto delete_list = [](ListNode *node) {
-        while (node != nullptr) {
-            ListNode *temp = node;
-            node = node->next;
-            delete temp;
-        }
-    };
-    
-    auto show_list = [](ListNode *node) {
-        while (node != nullptr) {
-            std::cout << node->val << " -> ";
-            node = node->next;
-        }
-        std::cout << std::endl;
-    };
-    
-    auto equals_list = [](ListNode *node1, ListNode *node2) -> bool {
-        while (node1 != nullptr && node2 != nullptr) {
-            if (node1->val != node2->val) {
-                return false;
-            }
-            node1 = node1->next;
-            node2 = node2->next;
-        }
-        
-        return (node1 == nullptr && node2 == nullptr);
-    };
-    
-    auto test = [=](std::initializer_list<int> li1,
+    auto test = [](std::initializer_list<int> li1,
                     std::initializer_list<int> li2,
                     std::initializer_list<int> li3) -> bool {
         Solution solution;
