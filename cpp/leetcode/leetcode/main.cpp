@@ -38,7 +38,10 @@ MAIN_NAMESPACE(remove_element)
 MAIN_NAMESPACE(implement_strstr)
 MAIN_NAMESPACE(divide_two_integers)
 MAIN_NAMESPACE(substring_with_concatenation_of_all_words)
+MAIN_NAMESPACE(next_permutation)
+MAIN_NAMESPACE(longest_valid_parentheses)
+MAIN_NAMESPACE(search_in_rotated_sorted_array)
 
 int main(int argc, const char *argv[]) {
-    return substring_with_concatenation_of_all_words::main(argc, argv);
+    return search_in_rotated_sorted_array::main(argc, argv);
 }
