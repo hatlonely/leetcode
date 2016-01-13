@@ -41,7 +41,8 @@ MAIN_NAMESPACE(substring_with_concatenation_of_all_words)
 MAIN_NAMESPACE(next_permutation)
 MAIN_NAMESPACE(longest_valid_parentheses)
 MAIN_NAMESPACE(search_in_rotated_sorted_array)
+MAIN_NAMESPACE(search_for_a_range)
 
 int main(int argc, const char *argv[]) {
-    return search_in_rotated_sorted_array::main(argc, argv);
+    return search_for_a_range::main(argc, argv);
 }
