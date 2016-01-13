@@ -36,7 +36,9 @@ MAIN_NAMESPACE(reverse_nodes_in_k_group)
 MAIN_NAMESPACE(remove_duplicates_from_sorted_array)
 MAIN_NAMESPACE(remove_element)
 MAIN_NAMESPACE(implement_strstr)
+MAIN_NAMESPACE(divide_two_integers)
+MAIN_NAMESPACE(substring_with_concatenation_of_all_words)
 
 int main(int argc, const char *argv[]) {
-    return implement_strstr::main(argc, argv);
+    return substring_with_concatenation_of_all_words::main(argc, argv);
 }
