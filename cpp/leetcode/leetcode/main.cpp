@@ -43,7 +43,8 @@ MAIN_NAMESPACE(longest_valid_parentheses)
 MAIN_NAMESPACE(search_in_rotated_sorted_array)
 MAIN_NAMESPACE(search_for_a_range)
 MAIN_NAMESPACE(search_insert_position)
+MAIN_NAMESPACE(valid_sudoku)
 
 int main(int argc, const char *argv[]) {
-    return search_insert_position::main(argc, argv);
+    return valid_sudoku::main(argc, argv);
 }
