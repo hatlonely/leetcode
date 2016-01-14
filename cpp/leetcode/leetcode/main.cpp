@@ -42,7 +42,8 @@ MAIN_NAMESPACE(next_permutation)
 MAIN_NAMESPACE(longest_valid_parentheses)
 MAIN_NAMESPACE(search_in_rotated_sorted_array)
 MAIN_NAMESPACE(search_for_a_range)
+MAIN_NAMESPACE(search_insert_position)
 
 int main(int argc, const char *argv[]) {
-    return search_for_a_range::main(argc, argv);
+    return search_insert_position::main(argc, argv);
 }
