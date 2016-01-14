@@ -44,7 +44,8 @@ MAIN_NAMESPACE(search_in_rotated_sorted_array)
 MAIN_NAMESPACE(search_for_a_range)
 MAIN_NAMESPACE(search_insert_position)
 MAIN_NAMESPACE(valid_sudoku)
+MAIN_NAMESPACE(sudoku_solver)
 
 int main(int argc, const char *argv[]) {
-    return valid_sudoku::main(argc, argv);
+    return sudoku_solver::main(argc, argv);
 }
