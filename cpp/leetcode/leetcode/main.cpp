@@ -45,7 +45,8 @@ MAIN_NAMESPACE(search_for_a_range)
 MAIN_NAMESPACE(search_insert_position)
 MAIN_NAMESPACE(valid_sudoku)
 MAIN_NAMESPACE(sudoku_solver)
+MAIN_NAMESPACE(count_and_say)
 
 int main(int argc, const char *argv[]) {
-    return sudoku_solver::main(argc, argv);
+    return count_and_say::main(argc, argv);
 }
