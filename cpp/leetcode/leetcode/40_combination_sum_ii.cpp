@@ -51,6 +51,9 @@ public:
                 current.push_back(candidates[i]);
                 result.push_back(current);
                 current.pop_back();
+                break;
+            } else {
+                break;
             }
             while (i + 1 < candidates.size() && candidates[i + 1] == candidates[i]) {
                 i++;

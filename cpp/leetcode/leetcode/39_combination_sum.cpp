@@ -49,6 +49,9 @@ public:
                 current.push_back(candidates[i]);
                 result.push_back(current);
                 current.pop_back();
+                break;
+            } else {
+                break;
             }
         }
     }
