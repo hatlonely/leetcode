@@ -48,7 +48,8 @@ MAIN_NAMESPACE(sudoku_solver)
 MAIN_NAMESPACE(count_and_say)
 MAIN_NAMESPACE(combination_sum)
 MAIN_NAMESPACE(combination_sum_ii)
+MAIN_NAMESPACE(first_missing_positive)
 
 int main(int argc, const char *argv[]) {
-    return combination_sum_ii::main(argc, argv);
+    return first_missing_positive::main(argc, argv);
 }
