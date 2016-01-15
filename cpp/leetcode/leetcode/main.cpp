@@ -51,7 +51,8 @@ MAIN_NAMESPACE(combination_sum_ii)
 MAIN_NAMESPACE(first_missing_positive)
 MAIN_NAMESPACE(trapping_rain_water)
 MAIN_NAMESPACE(multiply_strings)
+MAIN_NAMESPACE(wildcard_matching)
 
 int main(int argc, const char *argv[]) {
-    return multiply_strings::main(argc, argv);
+    return wildcard_matching::main(argc, argv);
 }
