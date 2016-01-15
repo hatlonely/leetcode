@@ -5,9 +5,9 @@
 //  Created by hatlonely on 16/1/15.
 //  Copyright © 2016年 hatlonely. All rights reserved.
 //
-// Given two numbers represented as strings, return multiplication of the numbers as a string.
+//  Given two numbers represented as strings, return multiplication of the numbers as a string.
 //
-// Note: The numbers can be arbitrarily large and are non-negative.
+//  Note: The numbers can be arbitrarily large and are non-negative.
 //
 
 #include <iostream>
