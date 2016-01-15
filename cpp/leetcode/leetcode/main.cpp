@@ -52,7 +52,10 @@ MAIN_NAMESPACE(first_missing_positive)
 MAIN_NAMESPACE(trapping_rain_water)
 MAIN_NAMESPACE(multiply_strings)
 MAIN_NAMESPACE(wildcard_matching)
+MAIN_NAMESPACE(jump_game_ii)
 
 int main(int argc, const char *argv[]) {
-    return wildcard_matching::main(argc, argv);
+    return jump_game_ii::main(argc, argv);
 }
+
+
