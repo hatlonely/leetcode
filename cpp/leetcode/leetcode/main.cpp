@@ -50,7 +50,8 @@ MAIN_NAMESPACE(combination_sum)
 MAIN_NAMESPACE(combination_sum_ii)
 MAIN_NAMESPACE(first_missing_positive)
 MAIN_NAMESPACE(trapping_rain_water)
+MAIN_NAMESPACE(multiply_strings)
 
 int main(int argc, const char *argv[]) {
-    return trapping_rain_water::main(argc, argv);
+    return multiply_strings::main(argc, argv);
 }
