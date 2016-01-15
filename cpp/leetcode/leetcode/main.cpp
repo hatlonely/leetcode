@@ -49,7 +49,8 @@ MAIN_NAMESPACE(count_and_say)
 MAIN_NAMESPACE(combination_sum)
 MAIN_NAMESPACE(combination_sum_ii)
 MAIN_NAMESPACE(first_missing_positive)
+MAIN_NAMESPACE(trapping_rain_water)
 
 int main(int argc, const char *argv[]) {
-    return first_missing_positive::main(argc, argv);
+    return trapping_rain_water::main(argc, argv);
 }
