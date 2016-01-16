@@ -61,9 +61,10 @@ MAIN_NAMESPACE(pow_x_n)
 MAIN_NAMESPACE(n_queens)
 MAIN_NAMESPACE(n_queens_ii)
 MAIN_NAMESPACE(maximum_subarray)
+MAIN_NAMESPACE(spiral_matrix)
 
 int main(int argc, const char *argv[]) {
-    return maximum_subarray::main(argc, argv);
+    return spiral_matrix::main(argc, argv);
 }
 
 
