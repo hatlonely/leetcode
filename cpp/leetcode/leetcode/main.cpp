@@ -53,9 +53,10 @@ MAIN_NAMESPACE(trapping_rain_water)
 MAIN_NAMESPACE(multiply_strings)
 MAIN_NAMESPACE(wildcard_matching)
 MAIN_NAMESPACE(jump_game_ii)
+MAIN_NAMESPACE(permutations)
 
 int main(int argc, const char *argv[]) {
-    return jump_game_ii::main(argc, argv);
+    return permutations::main(argc, argv);
 }
 
 
