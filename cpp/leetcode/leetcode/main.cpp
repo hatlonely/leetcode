@@ -58,9 +58,10 @@ MAIN_NAMESPACE(permutations_ii)
 MAIN_NAMESPACE(rotate_image)
 MAIN_NAMESPACE(group_anagrams)
 MAIN_NAMESPACE(pow_x_n)
+MAIN_NAMESPACE(n_queens)
 
 int main(int argc, const char *argv[]) {
-    return pow_x_n::main(argc, argv);
+    return n_queens::main(argc, argv);
 }
 
 
