@@ -60,9 +60,10 @@ MAIN_NAMESPACE(group_anagrams)
 MAIN_NAMESPACE(pow_x_n)
 MAIN_NAMESPACE(n_queens)
 MAIN_NAMESPACE(n_queens_ii)
+MAIN_NAMESPACE(maximum_subarray)
 
 int main(int argc, const char *argv[]) {
-    return n_queens_ii::main(argc, argv);
+    return maximum_subarray::main(argc, argv);
 }
 
 
