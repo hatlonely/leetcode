@@ -56,9 +56,10 @@ MAIN_NAMESPACE(jump_game_ii)
 MAIN_NAMESPACE(permutations)
 MAIN_NAMESPACE(permutations_ii)
 MAIN_NAMESPACE(rotate_image)
+MAIN_NAMESPACE(group_anagrams)
 
 int main(int argc, const char *argv[]) {
-    return rotate_image::main(argc, argv);
+    return group_anagrams::main(argc, argv);
 }
 
 
