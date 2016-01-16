@@ -55,9 +55,10 @@ MAIN_NAMESPACE(wildcard_matching)
 MAIN_NAMESPACE(jump_game_ii)
 MAIN_NAMESPACE(permutations)
 MAIN_NAMESPACE(permutations_ii)
+MAIN_NAMESPACE(rotate_image)
 
 int main(int argc, const char *argv[]) {
-    return permutations_ii::main(argc, argv);
+    return rotate_image::main(argc, argv);
 }
 
 
