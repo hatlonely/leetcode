@@ -66,9 +66,10 @@ MAIN_NAMESPACE(jump_game)
 MAIN_NAMESPACE(merge_intervals)
 MAIN_NAMESPACE(insert_interval)
 MAIN_NAMESPACE(length_of_last_word)
+MAIN_NAMESPACE(spiral_matrix_ii)
 
 int main(int argc, const char *argv[]) {
-    return length_of_last_word::main(argc, argv);
+    return spiral_matrix_ii::main(argc, argv);
 }
 
 
