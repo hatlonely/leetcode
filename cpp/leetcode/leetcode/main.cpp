@@ -62,9 +62,11 @@ MAIN_NAMESPACE(n_queens)
 MAIN_NAMESPACE(n_queens_ii)
 MAIN_NAMESPACE(maximum_subarray)
 MAIN_NAMESPACE(spiral_matrix)
+MAIN_NAMESPACE(jump_game)
+MAIN_NAMESPACE(merge_intervals)
 
 int main(int argc, const char *argv[]) {
-    return spiral_matrix::main(argc, argv);
+    return merge_intervals::main(argc, argv);
 }
 
 
