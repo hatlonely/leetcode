@@ -64,9 +64,10 @@ MAIN_NAMESPACE(maximum_subarray)
 MAIN_NAMESPACE(spiral_matrix)
 MAIN_NAMESPACE(jump_game)
 MAIN_NAMESPACE(merge_intervals)
+MAIN_NAMESPACE(insert_interval)
 
 int main(int argc, const char *argv[]) {
-    return merge_intervals::main(argc, argv);
+    return insert_interval::main(argc, argv);
 }
 
 

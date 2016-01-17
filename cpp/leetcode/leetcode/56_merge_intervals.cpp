@@ -51,12 +51,11 @@ public:
 };
 
 int main(int argc, const char *argv[]) {
-    auto test = [](std::vector<Interval> vi) -> bool {
+    auto test = [](std::vector<Interval> vi) {
         Solution solution;
         std::vector<Interval> intervals(vi);
         auto result = solution.merge(intervals);
         std::copy(result.begin(), result.end(), std::ostream_iterator<Interval>(std::cout, ", "));
-        return false;
     };
     
     test({Interval(15, 18), Interval(8, 10), Interval(1, 3), Interval(2, 6)});
