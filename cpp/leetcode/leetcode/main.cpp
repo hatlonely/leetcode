@@ -73,9 +73,10 @@ MAIN_NAMESPACE(unique_paths)
 MAIN_NAMESPACE(unique_paths_ii)
 MAIN_NAMESPACE(minimum_path_sum)
 MAIN_NAMESPACE(valid_number)
+MAIN_NAMESPACE(plus_one)
 
 int main(int argc, const char *argv[]) {
-    return valid_number::main(argc, argv);
+    return plus_one::main(argc, argv);
 }
 
 
