@@ -72,9 +72,10 @@ MAIN_NAMESPACE(rotate_list)
 MAIN_NAMESPACE(unique_paths)
 MAIN_NAMESPACE(unique_paths_ii)
 MAIN_NAMESPACE(minimum_path_sum)
+MAIN_NAMESPACE(valid_number)
 
 int main(int argc, const char *argv[]) {
-    return minimum_path_sum::main(argc, argv);
+    return valid_number::main(argc, argv);
 }
 
 
