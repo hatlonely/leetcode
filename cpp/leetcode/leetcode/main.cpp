@@ -70,9 +70,10 @@ MAIN_NAMESPACE(spiral_matrix_ii)
 MAIN_NAMESPACE(permutation_sequence)
 MAIN_NAMESPACE(rotate_list)
 MAIN_NAMESPACE(unique_paths)
+MAIN_NAMESPACE(unique_paths_ii)
 
 int main(int argc, const char *argv[]) {
-    return unique_paths::main(argc, argv);
+    return unique_paths_ii::main(argc, argv);
 }
 
 
