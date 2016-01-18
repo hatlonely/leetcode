@@ -69,9 +69,10 @@ MAIN_NAMESPACE(length_of_last_word)
 MAIN_NAMESPACE(spiral_matrix_ii)
 MAIN_NAMESPACE(permutation_sequence)
 MAIN_NAMESPACE(rotate_list)
+MAIN_NAMESPACE(unique_paths)
 
 int main(int argc, const char *argv[]) {
-    return rotate_list::main(argc, argv);
+    return unique_paths::main(argc, argv);
 }
 
 
