@@ -71,9 +71,10 @@ MAIN_NAMESPACE(permutation_sequence)
 MAIN_NAMESPACE(rotate_list)
 MAIN_NAMESPACE(unique_paths)
 MAIN_NAMESPACE(unique_paths_ii)
+MAIN_NAMESPACE(minimum_path_sum)
 
 int main(int argc, const char *argv[]) {
-    return unique_paths_ii::main(argc, argv);
+    return minimum_path_sum::main(argc, argv);
 }
 
 
