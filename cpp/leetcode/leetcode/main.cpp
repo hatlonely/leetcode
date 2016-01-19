@@ -79,9 +79,10 @@ MAIN_NAMESPACE(text_justification)
 MAIN_NAMESPACE(sqrt_x)
 MAIN_NAMESPACE(climbing_stairs)
 MAIN_NAMESPACE(simplify_path)
+MAIN_NAMESPACE(edit_distance)
 
 int main(int argc, const char *argv[]) {
-    return simplify_path::main(argc, argv);
+    return edit_distance::main(argc, argv);
 }
 
 
