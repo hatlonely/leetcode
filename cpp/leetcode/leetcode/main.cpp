@@ -78,9 +78,10 @@ MAIN_NAMESPACE(add_binary)
 MAIN_NAMESPACE(text_justification)
 MAIN_NAMESPACE(sqrt_x)
 MAIN_NAMESPACE(climbing_stairs)
+MAIN_NAMESPACE(simplify_path)
 
 int main(int argc, const char *argv[]) {
-    return climbing_stairs::main(argc, argv);
+    return simplify_path::main(argc, argv);
 }
 
 
