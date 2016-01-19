@@ -76,9 +76,10 @@ MAIN_NAMESPACE(valid_number)
 MAIN_NAMESPACE(plus_one)
 MAIN_NAMESPACE(add_binary)
 MAIN_NAMESPACE(text_justification)
+MAIN_NAMESPACE(sqrt_x)
 
 int main(int argc, const char *argv[]) {
-    return text_justification::main(argc, argv);
+    return sqrt_x::main(argc, argv);
 }
 
 
