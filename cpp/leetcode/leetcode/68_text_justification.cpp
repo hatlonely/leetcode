@@ -28,6 +28,7 @@
 //   "justification.  "
 //  ]
 //  Note: Each word is guaranteed not to exceed L in length.
+//
 
 #include <iostream>
 #include <cassert>
