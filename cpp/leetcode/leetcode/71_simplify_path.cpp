@@ -66,10 +66,10 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test("/home/", "/home");
-    test("/aa/./bb/../../cc/", "/c");
-    test("/a/./b/../../c/", "/c");
-    test("/", "/");
+    assert(test("/home/", "/home"));
+    assert(test("/aa/./bb/../../cc/", "/cc"));
+    assert(test("/a/./b/../../c/", "/c"));
+    assert(test("/", "/"));
     
     return 0;
 }
