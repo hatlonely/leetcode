@@ -77,9 +77,10 @@ MAIN_NAMESPACE(plus_one)
 MAIN_NAMESPACE(add_binary)
 MAIN_NAMESPACE(text_justification)
 MAIN_NAMESPACE(sqrt_x)
+MAIN_NAMESPACE(climbing_stairs)
 
 int main(int argc, const char *argv[]) {
-    return sqrt_x::main(argc, argv);
+    return climbing_stairs::main(argc, argv);
 }
 
 

@@ -100,8 +100,8 @@ int main(int argc, const char * argv[]) {
         return result == expected;
     };
     
-    test({"This", "is", "an", "example", "of", "text", "justification."}, 16,
-         {"This    is    an", "example  of text", "justification.  "});
+    assert(test({"This", "is", "an", "example", "of", "text", "justification."}, 16,
+         {"This    is    an", "example  of text", "justification.  "}));
     
     return 0;
 }

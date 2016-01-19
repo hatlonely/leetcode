@@ -10,6 +10,7 @@
 //
 
 #include <iostream>
+#include <cassert>
 
 namespace sqrt_x {
     
@@ -47,9 +48,9 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test(1, 1);
-    test(2, 1);
-    test(14, 1);
+    assert(test(1, 1));
+    assert(test(2, 1));
+    assert(test(14, 1));
     
     return 0;
 }
