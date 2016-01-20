@@ -82,9 +82,10 @@ MAIN_NAMESPACE(simplify_path)
 MAIN_NAMESPACE(edit_distance)
 MAIN_NAMESPACE(set_matrix_zeroes)
 MAIN_NAMESPACE(search_a_2d_matrix)
+MAIN_NAMESPACE(sort_colors)
 
 int main(int argc, const char *argv[]) {
-    return sqrt_x::main(argc, argv);
+    return sort_colors::main(argc, argv);
 }
 
 
