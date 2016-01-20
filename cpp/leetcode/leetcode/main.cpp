@@ -86,9 +86,10 @@ MAIN_NAMESPACE(sort_colors)
 MAIN_NAMESPACE(minimum_window_substring)
 MAIN_NAMESPACE(combinations)
 MAIN_NAMESPACE(subsets)
+MAIN_NAMESPACE(word_search)
 
 int main(int argc, const char *argv[]) {
-    return subsets::main(argc, argv);
+    return word_search::main(argc, argv);
 }
 
 
