@@ -81,9 +81,10 @@ MAIN_NAMESPACE(climbing_stairs)
 MAIN_NAMESPACE(simplify_path)
 MAIN_NAMESPACE(edit_distance)
 MAIN_NAMESPACE(set_matrix_zeroes)
+MAIN_NAMESPACE(search_a_2d_matrix)
 
 int main(int argc, const char *argv[]) {
-    return set_matrix_zeroes::main(argc, argv);
+    return search_a_2d_matrix::main(argc, argv);
 }
 
 
