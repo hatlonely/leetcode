@@ -80,9 +80,10 @@ MAIN_NAMESPACE(sqrt_x)
 MAIN_NAMESPACE(climbing_stairs)
 MAIN_NAMESPACE(simplify_path)
 MAIN_NAMESPACE(edit_distance)
+MAIN_NAMESPACE(set_matrix_zeroes)
 
 int main(int argc, const char *argv[]) {
-    return edit_distance::main(argc, argv);
+    return set_matrix_zeroes::main(argc, argv);
 }
 
 
