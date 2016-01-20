@@ -84,7 +84,7 @@ MAIN_NAMESPACE(set_matrix_zeroes)
 MAIN_NAMESPACE(search_a_2d_matrix)
 
 int main(int argc, const char *argv[]) {
-    return search_a_2d_matrix::main(argc, argv);
+    return sqrt_x::main(argc, argv);
 }
 
 

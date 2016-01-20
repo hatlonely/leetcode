@@ -50,7 +50,7 @@ int main(int argc, const char *argv[]) {
     
     assert(test(1, 1));
     assert(test(2, 1));
-    assert(test(14, 1));
+    assert(test(14, 3));
     
     return 0;
 }
