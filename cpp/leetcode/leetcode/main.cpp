@@ -85,9 +85,10 @@ MAIN_NAMESPACE(search_a_2d_matrix)
 MAIN_NAMESPACE(sort_colors)
 MAIN_NAMESPACE(minimum_window_substring)
 MAIN_NAMESPACE(combinations)
+MAIN_NAMESPACE(subsets)
 
 int main(int argc, const char *argv[]) {
-    return combinations::main(argc, argv);
+    return subsets::main(argc, argv);
 }
 
 
