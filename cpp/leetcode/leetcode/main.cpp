@@ -83,9 +83,10 @@ MAIN_NAMESPACE(edit_distance)
 MAIN_NAMESPACE(set_matrix_zeroes)
 MAIN_NAMESPACE(search_a_2d_matrix)
 MAIN_NAMESPACE(sort_colors)
+MAIN_NAMESPACE(minimum_window_substring)
 
 int main(int argc, const char *argv[]) {
-    return sort_colors::main(argc, argv);
+    return minimum_window_substring::main(argc, argv);
 }
 
 
