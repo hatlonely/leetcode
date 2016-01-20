@@ -84,9 +84,10 @@ MAIN_NAMESPACE(set_matrix_zeroes)
 MAIN_NAMESPACE(search_a_2d_matrix)
 MAIN_NAMESPACE(sort_colors)
 MAIN_NAMESPACE(minimum_window_substring)
+MAIN_NAMESPACE(combinations)
 
 int main(int argc, const char *argv[]) {
-    return minimum_window_substring::main(argc, argv);
+    return combinations::main(argc, argv);
 }
 
 
