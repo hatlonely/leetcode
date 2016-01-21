@@ -87,9 +87,10 @@ MAIN_NAMESPACE(minimum_window_substring)
 MAIN_NAMESPACE(combinations)
 MAIN_NAMESPACE(subsets)
 MAIN_NAMESPACE(word_search)
+MAIN_NAMESPACE(remove_duplicates_from_sorted_array_ii)
 
 int main(int argc, const char *argv[]) {
-    return word_search::main(argc, argv);
+    return remove_duplicates_from_sorted_array_ii::main(argc, argv);
 }
 
 
