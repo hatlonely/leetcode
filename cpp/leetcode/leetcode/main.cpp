@@ -88,9 +88,10 @@ MAIN_NAMESPACE(combinations)
 MAIN_NAMESPACE(subsets)
 MAIN_NAMESPACE(word_search)
 MAIN_NAMESPACE(remove_duplicates_from_sorted_array_ii)
+MAIN_NAMESPACE(search_in_rotated_sorted_array_ii)
 
 int main(int argc, const char *argv[]) {
-    return remove_duplicates_from_sorted_array_ii::main(argc, argv);
+    return search_in_rotated_sorted_array_ii::main(argc, argv);
 }
 
 
