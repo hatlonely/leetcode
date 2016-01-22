@@ -120,10 +120,6 @@ public:
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < n - i; j++) {
                 for (int k = 0; k < n - i; k++) {
-                    if (str1.substr(j, i + 1) == str2.substr(k, i + 1)) {
-                        scramble[i][j][k] = true;
-                        continue;
-                    }
                     for (int l = 1; l <= i; l++) {
                         if ((scramble[l - 1][j][k] && scramble[i - l][j + l][k + l]) ||
                             (scramble[l - 1][j][i + k + 1 - l] && scramble[i - l][j + l][k])) {
