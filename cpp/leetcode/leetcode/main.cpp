@@ -96,9 +96,10 @@ MAIN_NAMESPACE(maximal_rectangle)
 MAIN_NAMESPACE(partition_list)
 MAIN_NAMESPACE(scramble_string)
 MAIN_NAMESPACE(merge_sorted_array)
+MAIN_NAMESPACE(gray_code)
 
 int main(int argc, const char *argv[]) {
-    return merge_sorted_array::main(argc, argv);
+    return gray_code::main(argc, argv);
 }
 
 
