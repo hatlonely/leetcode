@@ -31,15 +31,10 @@ public:
             if (indexs.empty() || heights[indexs.top()] <= heights[i]) {
                 indexs.push(i++);
             } else {
-                int top = indexs.top();
+                int height = heights[indexs.top()];
                 indexs.pop();
-                int width = 0;
-                if (indexs.empty()) {
-                    width = i;
-                } else {
-                    width = i - indexs.top() - 1;
-                }
-                max_area = std::max(max_area, width * heights[top]);
+                int width = indexs.empty() ? i : i - indexs.top() - 1;
+                max_area = std::max(max_area, width * height);
             }
         }
         return max_area;
