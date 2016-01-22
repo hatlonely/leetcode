@@ -93,9 +93,10 @@ MAIN_NAMESPACE(remove_duplicates_from_sorted_list_ii)
 MAIN_NAMESPACE(remove_duplicates_from_sorted_list)
 MAIN_NAMESPACE(largest_rectangle_in_histogram)
 MAIN_NAMESPACE(maximal_rectangle)
+MAIN_NAMESPACE(partition_list)
 
 int main(int argc, const char *argv[]) {
-    return maximal_rectangle::main(argc, argv);
+    return partition_list::main(argc, argv);
 }
 
 
