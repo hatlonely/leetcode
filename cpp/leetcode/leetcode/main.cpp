@@ -91,9 +91,10 @@ MAIN_NAMESPACE(remove_duplicates_from_sorted_array_ii)
 MAIN_NAMESPACE(search_in_rotated_sorted_array_ii)
 MAIN_NAMESPACE(remove_duplicates_from_sorted_list_ii)
 MAIN_NAMESPACE(remove_duplicates_from_sorted_list)
+MAIN_NAMESPACE(largest_rectangle_in_histogram)
 
 int main(int argc, const char *argv[]) {
-    return remove_duplicates_from_sorted_list::main(argc, argv);
+    return largest_rectangle_in_histogram::main(argc, argv);
 }
 
 
