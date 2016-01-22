@@ -49,8 +49,11 @@
 #include <iostream>
 #include <cassert>
 #include <string>
+#include <vector>
 
 namespace scramble_string {
+
+namespace scramble_string_1 {
     
 class Solution {
 public:
@@ -89,16 +92,65 @@ public:
     }
 };
 
+}
+
+namespace scramble_string_2 {
+    
+class Solution {
+public:
+    bool isScramble(std::string str1, std::string str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+        if (str1.empty()) {
+            return true;
+        }
+        
+        int n = (int)str1.length();
+        std::vector<std::vector<std::vector<bool>>> scramble(n, std::vector<std::vector<bool>>(
+                                                             n, std::vector<bool>(
+                                                             n, false)));
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                scramble[0][j][k] = (str1[j] == str2[k]);
+            }
+        }
+        // i + 1 为长度，j 为str1的起始下标，k 为str2的起始下标
+        // scramble[i][j][k] 表示 is_scramble(str1.substr(j, i + 1), str2.substr(k, i + 1))
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                for (int k = 0; k < n - i; k++) {
+                    if (str1.substr(j, i + 1) == str2.substr(k, i + 1)) {
+                        scramble[i][j][k] = true;
+                        continue;
+                    }
+                    for (int l = 1; l <= i; l++) {
+                        if ((scramble[l - 1][j][k] && scramble[i - l][j + l][k + l]) ||
+                            (scramble[l - 1][j][i + k + 1 - l] && scramble[i - l][j + l][k])) {
+                            scramble[i][j][k] = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        
+        return scramble[n - 1][0][0];
+    }
+};
+    
+}
+    
 int main(int argc, const char *argv[]) {
     auto test = [](std::string str1, std::string str2, bool expected) {
-        Solution solution;
+        scramble_string_2::Solution solution;
         int result = solution.isScramble(str1, str2);
         std::cout << result << std::endl;
         return result == expected;
     };
     
     test("great", "rgtae", true);
-    test("a", "b", false);
+    test("abc", "cba", true);
     test("abb", "bab", true);
     
     return 0;
