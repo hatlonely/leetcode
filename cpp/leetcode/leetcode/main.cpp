@@ -95,9 +95,10 @@ MAIN_NAMESPACE(largest_rectangle_in_histogram)
 MAIN_NAMESPACE(maximal_rectangle)
 MAIN_NAMESPACE(partition_list)
 MAIN_NAMESPACE(scramble_string)
+MAIN_NAMESPACE(merge_sorted_array)
 
 int main(int argc, const char *argv[]) {
-    return scramble_string::main(argc, argv);
+    return merge_sorted_array::main(argc, argv);
 }
 
 
