@@ -101,9 +101,10 @@ MAIN_NAMESPACE(subsets_ii)
 MAIN_NAMESPACE(decode_ways)
 MAIN_NAMESPACE(reverse_linked_list_ii)
 MAIN_NAMESPACE(restore_ip_addresses)
+MAIN_NAMESPACE(binary_tree_inorder_traversal)
 
 int main(int argc, const char *argv[]) {
-    return restore_ip_addresses::main(argc, argv);
+    return binary_tree_inorder_traversal::main(argc, argv);
 }
 
 
