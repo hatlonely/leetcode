@@ -98,9 +98,10 @@ MAIN_NAMESPACE(scramble_string)
 MAIN_NAMESPACE(merge_sorted_array)
 MAIN_NAMESPACE(gray_code)
 MAIN_NAMESPACE(subsets_ii)
+MAIN_NAMESPACE(decode_ways)
 
 int main(int argc, const char *argv[]) {
-    return subsets_ii::main(argc, argv);
+    return decode_ways::main(argc, argv);
 }
 
 
