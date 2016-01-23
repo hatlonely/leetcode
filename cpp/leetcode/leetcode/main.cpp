@@ -97,9 +97,10 @@ MAIN_NAMESPACE(partition_list)
 MAIN_NAMESPACE(scramble_string)
 MAIN_NAMESPACE(merge_sorted_array)
 MAIN_NAMESPACE(gray_code)
+MAIN_NAMESPACE(subsets_ii)
 
 int main(int argc, const char *argv[]) {
-    return gray_code::main(argc, argv);
+    return subsets_ii::main(argc, argv);
 }
 
 
