@@ -8,12 +8,12 @@
 
 #include "interval.h"
 
-std::string to_string(const Interval &interval) {
+std::string ToString(const Interval &interval) {
     return "(" + std::to_string(interval.start) + ", " + std::to_string(interval.end) + ")";
 }
 
 std::ostream &operator <<(std::ostream &out, const Interval &interval) {
-    out << to_string(interval);
+    out << ToString(interval);
     return out;
 }
 

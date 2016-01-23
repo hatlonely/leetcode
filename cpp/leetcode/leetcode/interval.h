@@ -19,7 +19,7 @@ struct Interval {
     Interval(int s, int e) : start(s), end(e) {}
 };
 
-std::string to_string(const Interval &interval);
+std::string ToString(const Interval &interval);
 std::ostream &operator <<(std::ostream &out, const Interval &interval);
 
 #endif /* interval_h */
