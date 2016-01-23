@@ -100,9 +100,10 @@ MAIN_NAMESPACE(gray_code)
 MAIN_NAMESPACE(subsets_ii)
 MAIN_NAMESPACE(decode_ways)
 MAIN_NAMESPACE(reverse_linked_list_ii)
+MAIN_NAMESPACE(restore_ip_addresses)
 
 int main(int argc, const char *argv[]) {
-    return reverse_linked_list_ii::main(argc, argv);
+    return restore_ip_addresses::main(argc, argv);
 }
 
 
