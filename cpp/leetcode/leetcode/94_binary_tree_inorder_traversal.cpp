@@ -77,9 +77,9 @@ public:
 int main(int argc, const char *argv[]) {
     auto test = [](std::vector<int> vi, std::vector<int> expected) {
         binary_tree_inorder_traversal_2::Solution solution;
-        TreeNode *root = create_tree(vi);
+        TreeNode *root = CreateTree(vi);
         auto result = solution.inorderTraversal(root);
-        destroy_tree(root);
+        DestroyTree(root);
         std::copy(result.begin(), result.end(), std::ostream_iterator<int>(std::cout, ", "));
         std::cout << std::endl;
         return result == expected;

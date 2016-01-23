@@ -10,7 +10,7 @@
 #include <stack>
 #include <vector>
 
-TreeNode *create_tree(std::vector<int> vi) {
+TreeNode *CreateTree(std::vector<int> vi) {
     TreeNode prev(0);
     TreeNode *node = &prev;
     
@@ -35,27 +35,27 @@ TreeNode *create_tree(std::vector<int> vi) {
     return prev.left;
 }
 
-void destroy_tree(TreeNode *node) {
+void DestroyTree(TreeNode *node) {
     if (node != nullptr) {
-        destroy_tree(node->left);
-        destroy_tree(node->right);
+        DestroyTree(node->left);
+        DestroyTree(node->right);
         delete node;
     }
 }
 
-static void show_tree_process(TreeNode *node) {
+static void _ShowTreeProcess(TreeNode *node) {
     if (node == nullptr) {
         std::cout << "#, ";
     } else {
         std::cout << node->val << ", ";
-        show_tree_process(node->left);
-        show_tree_process(node->right);
+        _ShowTreeProcess(node->left);
+        _ShowTreeProcess(node->right);
     }
     
 }
 
-void show_tree(TreeNode *node) {
-    show_tree_process(node);
+void ShowTree(TreeNode *node) {
+    _ShowTreeProcess(node);
     std::cout << std::endl;
 }
 

@@ -19,8 +19,8 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-TreeNode *create_tree(std::vector<int> li);
-void destroy_tree(TreeNode *node);
-void show_tree(TreeNode *node);
+TreeNode *CreateTree(std::vector<int> li);
+void DestroyTree(TreeNode *node);
+void ShowTree(TreeNode *node);
 
 #endif /* tree_node_hpp */
