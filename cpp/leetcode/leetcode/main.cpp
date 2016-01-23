@@ -99,9 +99,10 @@ MAIN_NAMESPACE(merge_sorted_array)
 MAIN_NAMESPACE(gray_code)
 MAIN_NAMESPACE(subsets_ii)
 MAIN_NAMESPACE(decode_ways)
+MAIN_NAMESPACE(reverse_linked_list_ii)
 
 int main(int argc, const char *argv[]) {
-    return decode_ways::main(argc, argv);
+    return reverse_linked_list_ii::main(argc, argv);
 }
 
 
