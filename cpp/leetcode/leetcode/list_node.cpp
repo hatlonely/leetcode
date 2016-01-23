@@ -9,7 +9,7 @@
 #include <iostream>
 #include "list_node.h"
 
-ListNode *create_list(std::initializer_list<int> li) {
+ListNode *CreateList(std::initializer_list<int> li) {
     ListNode prev(0);
     ListNode *node = &prev;
     for (int i: li) {
@@ -19,7 +19,7 @@ ListNode *create_list(std::initializer_list<int> li) {
     return prev.next;
 };
 
-void delete_list(ListNode *node) {
+void DestroyList(ListNode *node) {
     while (node != nullptr) {
         ListNode *next = node->next;
         delete node;
@@ -27,7 +27,7 @@ void delete_list(ListNode *node) {
     }
 };
 
-void show_list(ListNode *node) {
+void ShowList(ListNode *node) {
     while (node != nullptr) {
         std::cout << node->val << ", ";
         node = node->next;
@@ -35,7 +35,7 @@ void show_list(ListNode *node) {
     std::cout << std::endl;
 };
 
-bool equals_list(ListNode *node1, ListNode *node2) {
+bool EqualsList(ListNode *node1, ListNode *node2) {
     while (node1 != nullptr && node2 != nullptr) {
         if (node1->val != node2->val) {
             return false;

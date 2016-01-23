@@ -50,13 +50,13 @@ public:
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, int x, std::initializer_list<int> expected_li) {
         Solution solution;
-        ListNode *head = create_list(li);
-        ListNode *expected = create_list(expected_li);
+        ListNode *head = CreateList(li);
+        ListNode *expected = CreateList(expected_li);
         ListNode *result = solution.partition(head, x);
-        bool is_equal = equals_list(result, expected);
-        show_list(result);
-        delete_list(expected);
-        delete_list(result);
+        bool is_equal = EqualsList(result, expected);
+        ShowList(result);
+        DestroyList(expected);
+        DestroyList(result);
         return is_equal;
     };
     

@@ -17,9 +17,9 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
 };
 
-ListNode *create_list(std::initializer_list<int> li);
-void delete_list(ListNode *node);
-void show_list(ListNode *node);
-bool equals_list(ListNode *node1, ListNode *node2);
+ListNode *CreateList(std::initializer_list<int> li);
+void DestroyList(ListNode *node);
+void ShowList(ListNode *node);
+bool EqualsList(ListNode *node1, ListNode *node2);
 
 #endif /* list_node_h */

@@ -52,10 +52,10 @@ int main(int argc, const char *argv[]) {
         Solution solution;
         std::vector<ListNode *> lists;
         for (auto &li: lli) {
-            lists.push_back(create_list(li));
+            lists.push_back(CreateList(li));
         }
         ListNode* result = solution.mergeKLists(lists);
-        show_list(result);
+        ShowList(result);
     };
     
     test({{1, 9}, {2, 3, 5, 8}, {4, 6, 7}});

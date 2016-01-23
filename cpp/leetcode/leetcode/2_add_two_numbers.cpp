@@ -65,15 +65,15 @@ int main(int argc, const char *argv[]) {
                    std::initializer_list<int> li2,
                    std::initializer_list<int> li) -> bool {
         Solution solution;
-        ListNode *node1 = create_list(li1);
-        ListNode *node2 = create_list(li2);
-        ListNode *expected = create_list(li);
+        ListNode *node1 = CreateList(li1);
+        ListNode *node2 = CreateList(li2);
+        ListNode *expected = CreateList(li);
         ListNode *result = solution.addTwoNumbers(node1, node2);
-        bool is_equal = equals_list(result, expected);
-        delete_list(node1);
-        delete_list(node2);
-        delete_list(expected);
-        delete_list(result);
+        bool is_equal = EqualsList(result, expected);
+        DestroyList(node1);
+        DestroyList(node2);
+        DestroyList(expected);
+        DestroyList(result);
         return is_equal;
     };
     

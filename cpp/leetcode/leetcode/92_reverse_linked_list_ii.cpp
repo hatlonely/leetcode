@@ -60,13 +60,13 @@ int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, int m, int n,
                    std::initializer_list<int> expected_li) {
         Solution solution;
-        ListNode *head = create_list(li);
-        ListNode *expected = create_list(expected_li);
+        ListNode *head = CreateList(li);
+        ListNode *expected = CreateList(expected_li);
         ListNode *result = solution.reverseBetween(head, m, n);
-        show_list(result);
-        bool is_equal = equals_list(result, expected);
-        delete_list(expected);
-        delete_list(result);
+        ShowList(result);
+        bool is_equal = EqualsList(result, expected);
+        DestroyList(expected);
+        DestroyList(result);
         return is_equal;
     };
     

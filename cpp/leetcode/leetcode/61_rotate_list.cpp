@@ -58,11 +58,11 @@ public:
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, int k, std::initializer_list<int> expected_li) {
         Solution solution;
-        ListNode *head = create_list(li);
-        ListNode *expected = create_list(expected_li);
+        ListNode *head = CreateList(li);
+        ListNode *expected = CreateList(expected_li);
         ListNode *result = solution.rotateRight(head, k);
-        show_list(result);
-        return equals_list(result, expected);
+        ShowList(result);
+        return EqualsList(result, expected);
     };
     
     assert(test({1, 2, 3 ,4, 5}, 2, {4, 5, 1, 2, 3}));

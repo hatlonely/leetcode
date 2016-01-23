@@ -53,13 +53,13 @@ public:
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, std::initializer_list<int> expected_li) {
         Solution solution;
-        ListNode *head = create_list(li);
-        ListNode *expected = create_list(expected_li);
+        ListNode *head = CreateList(li);
+        ListNode *expected = CreateList(expected_li);
         ListNode *result = solution.deleteDuplicates(head);
-        show_list(result);
-        bool is_equal = equals_list(result, expected);
-        delete_list(result);
-        delete_list(expected);
+        ShowList(result);
+        bool is_equal = EqualsList(result, expected);
+        DestroyList(result);
+        DestroyList(expected);
         return is_equal;
     };
     

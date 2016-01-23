@@ -73,14 +73,14 @@ int main(int argc, const char *argv[]) {
                     std::initializer_list<int> li2,
                     std::initializer_list<int> li3) -> bool {
         Solution solution;
-        ListNode *list1 = create_list(li1);
-        ListNode *list2 = create_list(li2);
-        ListNode *expected = create_list(li3);
+        ListNode *list1 = CreateList(li1);
+        ListNode *list2 = CreateList(li2);
+        ListNode *expected = CreateList(li3);
         ListNode *result = solution.mergeTwoLists(list1, list2);
-        show_list(result);
-        bool is_equal = equals_list(result, expected);
-        delete_list(result);
-        delete_list(expected);
+        ShowList(result);
+        bool is_equal = EqualsList(result, expected);
+        DestroyList(result);
+        DestroyList(expected);
         return is_equal;
     };
     

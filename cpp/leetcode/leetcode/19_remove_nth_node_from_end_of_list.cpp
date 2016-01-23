@@ -52,13 +52,13 @@ int main(int argc, const char *argv[]) {
                     int n,
                     std::initializer_list<int> li2) -> bool {
         Solution solution;
-        ListNode *list = create_list(li1);
-        ListNode *expected = create_list(li2);
+        ListNode *list = CreateList(li1);
+        ListNode *expected = CreateList(li2);
         ListNode *result = solution.removeNthFromEnd(list, n);
-        show_list(result);
-        bool is_equal = equals_list(result, expected);
-        delete_list(result);
-        delete_list(expected);
+        ShowList(result);
+        bool is_equal = EqualsList(result, expected);
+        DestroyList(result);
+        DestroyList(expected);
         return is_equal;
     };
     

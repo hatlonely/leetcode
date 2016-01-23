@@ -65,13 +65,13 @@ public:
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, int k, std::initializer_list<int> expected_li) -> bool {
         Solution solution;
-        ListNode *list = create_list(li);
-        ListNode *expected = create_list(expected_li);
+        ListNode *list = CreateList(li);
+        ListNode *expected = CreateList(expected_li);
         ListNode *result = solution.reverseKGroup(list, k);
-        show_list(result);
-        bool isequal = equals_list(result, expected);
-        delete_list(result);
-        delete_list(expected);
+        ShowList(result);
+        bool isequal = EqualsList(result, expected);
+        DestroyList(result);
+        DestroyList(expected);
         return isequal;
     };
     
