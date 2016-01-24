@@ -8,35 +8,35 @@
 
 #include "tree_node.h"
 #include <stack>
+#include <queue>
 #include <vector>
 
 TreeNode *CreateTree(std::initializer_list<int> li) {
     TreeNode prev(0);
     TreeNode *node = &prev;
     
-    std::stack<TreeNode *> nodes;
-    nodes.push(node);
+    std::queue<TreeNode *> nodes;
     
-    int is_left = true;
-    for (auto i: li) {
-        if (i == $) {
-            node = nodes.top();
-            nodes.pop();
+    int is_left = false;
+    for (int i: li) {
+        if (is_left) {
+            if (i != $) {
+                node->left = new TreeNode(i);
+                nodes.push(node->left);
+            }
             is_left = false;
         } else {
-            if (is_left) {
-                node->left  = new TreeNode(i);
-                node = node->left;
-            } else {
+            if (i != $) {
                 node->right = new TreeNode(i);
-                node = node->right;
+                nodes.push(node->right);
             }
-            nodes.push(node);
+            node = nodes.front();
+            nodes.pop();
             is_left = true;
         }
     }
-
-    return prev.left;
+    
+    return prev.right;
 }
 
 void DestroyTree(TreeNode *node) {
@@ -47,20 +47,26 @@ void DestroyTree(TreeNode *node) {
     }
 }
 
-static void _ShowTreeProcess(TreeNode *node) {
-    if (node == nullptr) {
-        std::cout << "#, ";
-    } else {
-        std::cout << node->val << ", ";
-        _ShowTreeProcess(node->left);
-        _ShowTreeProcess(node->right);
-    }
-    
-}
-
 void ShowTree(TreeNode *node) {
-    _ShowTreeProcess(node);
+    std::queue<TreeNode *> nodes;
+    nodes.push(node);
+    std::cout << node->val << ", ";
+    while (!nodes.empty()) {
+        node = nodes.front();
+        nodes.pop();
+        if (node->left != nullptr) {
+            nodes.push(node->left);
+            std::cout << node->left->val << ", ";
+        } else {
+            std::cout << "$, ";
+        }
+        if (node->right != nullptr) {
+            nodes.push(node->right);
+            std::cout << node->right->val << ", ";
+        } else {
+            std::cout << "$, ";
+        }
+    }
     std::cout << std::endl;
 }
-
 

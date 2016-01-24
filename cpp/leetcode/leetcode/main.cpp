@@ -106,9 +106,10 @@ MAIN_NAMESPACE(unique_binary_search_trees_ii)
 MAIN_NAMESPACE(unique_binary_search_trees)
 MAIN_NAMESPACE(interleaving_string)
 MAIN_NAMESPACE(validate_binary_search_tree)
+MAIN_NAMESPACE(recover_binary_search_tree)
 
 int main(int argc, const char *argv[]) {
-    return validate_binary_search_tree::main(argc, argv);
+    return recover_binary_search_tree::main(argc, argv);
 }
 
 

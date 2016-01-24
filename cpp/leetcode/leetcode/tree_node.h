@@ -10,7 +10,6 @@
 #define tree_node_h
 
 #include <iostream>
-#include <vector>
 
 const int $ = -1;
 
