@@ -75,9 +75,9 @@ public:
 }
 
 int main(int argc, const char *argv[]) {
-    auto test = [](std::vector<int> vi, std::vector<int> expected) {
+    auto test = [](std::initializer_list<int> li, std::vector<int> expected) {
         binary_tree_inorder_traversal_2::Solution solution;
-        TreeNode *root = CreateTree(vi);
+        TreeNode *root = CreateTree(li);
         auto result = solution.inorderTraversal(root);
         DestroyTree(root);
         std::copy(result.begin(), result.end(), std::ostream_iterator<int>(std::cout, ", "));
@@ -85,7 +85,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    assert(test({1, -1, 2, 3}, {1, 3, 2}));
+    assert(test({1, $, 2, 3}, {1, 3, 2}));
     
     return 0;
 }

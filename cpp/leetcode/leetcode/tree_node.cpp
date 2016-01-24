@@ -10,7 +10,7 @@
 #include <stack>
 #include <vector>
 
-TreeNode *CreateTree(std::vector<int> li) {
+TreeNode *CreateTree(std::initializer_list<int> li) {
     TreeNode prev(0);
     TreeNode *node = &prev;
     

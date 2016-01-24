@@ -21,7 +21,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-TreeNode *CreateTree(std::vector<int> li);
+TreeNode *CreateTree(std::initializer_list<int> li);
 void DestroyTree(TreeNode *node);
 void ShowTree(TreeNode *node);
 

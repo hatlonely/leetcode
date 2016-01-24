@@ -45,9 +45,9 @@ public:
 };
 
 int main(int argc, const char *argv[]) {
-    auto test = [](std::vector<int> vi, bool expected) {
+    auto test = [](std::initializer_list<int> li, bool expected) {
         Solution solution;
-        TreeNode *root = CreateTree(vi);
+        TreeNode *root = CreateTree(li);
         bool result = solution.isValidBST(root);
         std::cout << result << std::endl;
         DestroyTree(root);
