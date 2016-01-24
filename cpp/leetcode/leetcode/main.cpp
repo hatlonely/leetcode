@@ -111,9 +111,10 @@ MAIN_NAMESPACE(same_tree)
 MAIN_NAMESPACE(symmetric_tree)
 MAIN_NAMESPACE(binary_tree_level_order_traversal)
 MAIN_NAMESPACE(binary_tree_zigzag_level_order_traversal)
+MAIN_NAMESPACE(maximum_depth_of_binary_tree)
 
 int main(int argc, const char *argv[]) {
-    return binary_tree_zigzag_level_order_traversal::main(argc, argv);
+    return maximum_depth_of_binary_tree::main(argc, argv);
 }
 
 
