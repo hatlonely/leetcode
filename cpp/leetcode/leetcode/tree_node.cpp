@@ -10,28 +10,32 @@
 #include <stack>
 #include <vector>
 
-TreeNode *CreateTree(std::vector<int> vi) {
+TreeNode *CreateTree(std::vector<int> li) {
     TreeNode prev(0);
     TreeNode *node = &prev;
     
     std::stack<TreeNode *> nodes;
     nodes.push(node);
-    for (int i = 0; i < vi.size(); i++) {
-        if (vi[i] == -1) {
+    
+    int is_left = true;
+    for (auto i: li) {
+        if (i == $) {
             node = nodes.top();
             nodes.pop();
-            if (++i >= vi.size()) {
-                break;
-            }
-            node->right = new TreeNode(vi[i]);
-            node = node->right;
-            nodes.push(node);
+            is_left = false;
         } else {
-            node->left = new TreeNode(vi[i]);
-            node = node->left;
+            if (is_left) {
+                node->left  = new TreeNode(i);
+                node = node->left;
+            } else {
+                node->right = new TreeNode(i);
+                node = node->right;
+            }
             nodes.push(node);
+            is_left = true;
         }
     }
+
     return prev.left;
 }
 

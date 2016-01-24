@@ -12,6 +12,8 @@
 #include <iostream>
 #include <vector>
 
+const int $ = -1;
+
 struct TreeNode {
     int val;
     TreeNode *left;
