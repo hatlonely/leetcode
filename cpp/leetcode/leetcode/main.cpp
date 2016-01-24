@@ -110,9 +110,10 @@ MAIN_NAMESPACE(recover_binary_search_tree)
 MAIN_NAMESPACE(same_tree)
 MAIN_NAMESPACE(symmetric_tree)
 MAIN_NAMESPACE(binary_tree_level_order_traversal)
+MAIN_NAMESPACE(binary_tree_zigzag_level_order_traversal)
 
 int main(int argc, const char *argv[]) {
-    return binary_tree_level_order_traversal::main(argc, argv);
+    return binary_tree_zigzag_level_order_traversal::main(argc, argv);
 }
 
 
