@@ -108,9 +108,10 @@ MAIN_NAMESPACE(interleaving_string)
 MAIN_NAMESPACE(validate_binary_search_tree)
 MAIN_NAMESPACE(recover_binary_search_tree)
 MAIN_NAMESPACE(same_tree)
+MAIN_NAMESPACE(symmetric_tree)
 
 int main(int argc, const char *argv[]) {
-    return same_tree::main(argc, argv);
+    return symmetric_tree::main(argc, argv);
 }
 
 
