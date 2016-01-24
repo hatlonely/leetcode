@@ -31,6 +31,8 @@
 
 namespace binary_tree_level_order_traversal {
     
+namespace binary_tree_level_order_traversal_1 {
+    
 class Solution {
 public:
     std::vector<std::vector<int>> levelOrder(TreeNode *root) {
@@ -71,10 +73,38 @@ public:
         return result;
     }
 };
+    
+}
 
+namespace binary_tree_level_order_traversal_2 {
+
+class Solution {
+public:
+    std::vector<std::vector<int>> levelOrder(TreeNode *root) {
+        std::vector<std::vector<int>> result;
+        level_order_process(root, 1, result);
+        return result;
+    }
+    
+    void level_order_process(TreeNode *root, int level, std::vector<std::vector<int>> &result) {
+        if (root == nullptr) {
+            return;
+        }
+        while (level > result.size()) {
+            result.push_back({});
+        }
+        
+        result[level - 1].push_back(root->val);
+        level_order_process(root->left,  level + 1, result);
+        level_order_process(root->right, level + 1, result);
+    }
+};
+
+}
+    
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, std::vector<std::vector<int>> expected) {
-        Solution solution;
+        binary_tree_level_order_traversal_2::Solution solution;
         TreeNode *root = CreateTree(li);
         auto result = solution.levelOrder(root);
         for (auto vi: result) {
