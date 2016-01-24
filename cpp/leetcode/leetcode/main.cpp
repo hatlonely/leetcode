@@ -113,9 +113,10 @@ MAIN_NAMESPACE(binary_tree_level_order_traversal)
 MAIN_NAMESPACE(binary_tree_zigzag_level_order_traversal)
 MAIN_NAMESPACE(maximum_depth_of_binary_tree)
 MAIN_NAMESPACE(construct_binary_tree_from_preorder_and_inorder_traversal)
+MAIN_NAMESPACE(construct_binary_tree_from_inorder_and_postorder_traversal)
 
 int main(int argc, const char *argv[]) {
-    return construct_binary_tree_from_preorder_and_inorder_traversal::main(argc, argv);
+    return construct_binary_tree_from_inorder_and_postorder_traversal::main(argc, argv);
 }
 
 
