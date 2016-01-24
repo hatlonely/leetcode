@@ -30,7 +30,7 @@ namespace symmetric_tree {
     
 class Solution {
 public:
-    bool isSymmetric(TreeNode* root) {
+    bool isSymmetric(TreeNode *root) {
         if (root == nullptr) {
             return true;
         }
