@@ -23,5 +23,6 @@ struct TreeNode {
 TreeNode *CreateTree(std::initializer_list<int> li);
 void DestroyTree(TreeNode *node);
 void ShowTree(TreeNode *node);
+bool EqualsTree(TreeNode *node1, TreeNode *node2);
 
 #endif /* tree_node_hpp */

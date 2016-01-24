@@ -70,3 +70,15 @@ void ShowTree(TreeNode *node) {
     std::cout << std::endl;
 }
 
+bool EqualsTree(TreeNode *node1, TreeNode *node2) {
+    if (node1 == nullptr) {
+        return node2 == nullptr;
+    }
+    if (node2 == nullptr) {
+        return false;
+    }
+    return node1->val == node2->val &&
+    EqualsTree(node1->left, node2->left) &&
+    EqualsTree(node1->right, node2->right);
+}
+
