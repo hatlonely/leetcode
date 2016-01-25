@@ -122,9 +122,10 @@ MAIN_NAMESPACE(minimum_depth_of_binary_tree)
 MAIN_NAMESPACE(path_sum)
 MAIN_NAMESPACE(path_sum_ii)
 MAIN_NAMESPACE(flatten_binary_tree_to_linked_list)
+MAIN_NAMESPACE(distinct_subsequences)
 
 int main(int argc, const char *argv[]) {
-    return flatten_binary_tree_to_linked_list::main(argc, argv);
+    return distinct_subsequences::main(argc, argv);
 }
 
 
