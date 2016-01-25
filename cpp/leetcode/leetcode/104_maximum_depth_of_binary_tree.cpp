@@ -37,7 +37,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({1, $, 2, 3}, 3);
+    assert(test({1, $, 2, 3}, 3));
     
     return 0;
 }

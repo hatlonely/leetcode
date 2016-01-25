@@ -126,9 +126,10 @@ MAIN_NAMESPACE(distinct_subsequences)
 MAIN_NAMESPACE(populating_next_right_pointers_in_each_node)
 MAIN_NAMESPACE(populating_next_right_pointers_in_each_node_ii)
 MAIN_NAMESPACE(pascal_s_triangle)
+MAIN_NAMESPACE(pascal_s_triangle_ii)
 
 int main(int argc, const char *argv[]) {
-    return pascal_s_triangle::main(argc, argv);
+    return pascal_s_triangle_ii::main(argc, argv);
 }
 
 

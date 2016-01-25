@@ -58,7 +58,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test("rabbbit", "rabbit", 3);
+    assert(test("rabbbit", "rabbit", 3));
     
     return 0;
 }

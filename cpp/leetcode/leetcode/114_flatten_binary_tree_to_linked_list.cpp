@@ -76,8 +76,8 @@ int main(int argc, const char *argv[]) {
         return is_equal;
     };
     
-    test({1, 2, 5, 3, 4, $, 6}, {});
-    test({0}, {});
+    assert(test({1, 2, 5, 3, 4, $, 6}, {1, $, 2, $, 3, $, 4, $, 5, $, 6}));
+    assert(test({0}, {0}));
     
     return 0;
 }

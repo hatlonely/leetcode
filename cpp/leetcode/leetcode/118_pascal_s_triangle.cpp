@@ -57,7 +57,7 @@ int main(int argc, const char *argv[]) {
         return result == vvi;
     };
     
-    test(4, {});
+    assert(test(4, {{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}}));
     
     return 0;
 }

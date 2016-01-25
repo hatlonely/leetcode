@@ -56,7 +56,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({5, 4, 8, 11, $, 13, 4, 7, 2, $, $, $, 1}, 22, true);
+    assert(test({5, 4, 8, 11, $, 13, 4, 7, 2, $, $, $, 1}, 22, true));
     
     return 0;
 }
