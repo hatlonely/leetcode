@@ -120,9 +120,10 @@ MAIN_NAMESPACE(convert_sorted_list_to_binary_search_tree)
 MAIN_NAMESPACE(balanced_binary_tree)
 MAIN_NAMESPACE(minimum_depth_of_binary_tree)
 MAIN_NAMESPACE(path_sum)
+MAIN_NAMESPACE(path_sum_ii)
 
 int main(int argc, const char *argv[]) {
-    return path_sum::main(argc, argv);
+    return path_sum_ii::main(argc, argv);
 }
 
 
