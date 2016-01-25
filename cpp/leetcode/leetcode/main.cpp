@@ -125,9 +125,10 @@ MAIN_NAMESPACE(flatten_binary_tree_to_linked_list)
 MAIN_NAMESPACE(distinct_subsequences)
 MAIN_NAMESPACE(populating_next_right_pointers_in_each_node)
 MAIN_NAMESPACE(populating_next_right_pointers_in_each_node_ii)
+MAIN_NAMESPACE(pascal_s_triangle)
 
 int main(int argc, const char *argv[]) {
-    return populating_next_right_pointers_in_each_node_ii::main(argc, argv);
+    return pascal_s_triangle::main(argc, argv);
 }
 
 
