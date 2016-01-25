@@ -118,9 +118,10 @@ MAIN_NAMESPACE(binary_tree_level_order_traversal_ii)
 MAIN_NAMESPACE(convert_sorted_array_to_binary_search_tree)
 MAIN_NAMESPACE(convert_sorted_list_to_binary_search_tree)
 MAIN_NAMESPACE(balanced_binary_tree)
+MAIN_NAMESPACE(minimum_depth_of_binary_tree)
 
 int main(int argc, const char *argv[]) {
-    return balanced_binary_tree::main(argc, argv);
+    return minimum_depth_of_binary_tree::main(argc, argv);
 }
 
 
