@@ -25,4 +25,4 @@ void DestroyTree(TreeNode *node);
 void ShowTree(TreeNode *node);
 bool EqualsTree(TreeNode *node1, TreeNode *node2);
 
-#endif /* tree_node_hpp */
+#endif /* tree_node_h */

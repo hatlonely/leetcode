@@ -25,4 +25,4 @@ TreeLinkNode *CreateLinkTree(std::initializer_list<int> li);
 void DestroyTreeLink(TreeLinkNode *node);
 void ShowTreeLink(TreeLinkNode *node);
 
-#endif /* tree_link_node_hpp */
+#endif /* tree_link_node_h */

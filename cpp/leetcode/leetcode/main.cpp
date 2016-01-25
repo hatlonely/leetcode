@@ -124,9 +124,10 @@ MAIN_NAMESPACE(path_sum_ii)
 MAIN_NAMESPACE(flatten_binary_tree_to_linked_list)
 MAIN_NAMESPACE(distinct_subsequences)
 MAIN_NAMESPACE(populating_next_right_pointers_in_each_node)
+MAIN_NAMESPACE(populating_next_right_pointers_in_each_node_ii)
 
 int main(int argc, const char *argv[]) {
-    return populating_next_right_pointers_in_each_node::main(argc, argv);
+    return populating_next_right_pointers_in_each_node_ii::main(argc, argv);
 }
 
 
