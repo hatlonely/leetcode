@@ -1,5 +1,5 @@
 //
-//  list_node.hpp
+//  list_node.h
 //  leetcode
 //
 //  Created by hatlonely on 16/1/12.
