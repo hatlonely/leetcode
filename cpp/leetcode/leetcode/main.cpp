@@ -117,9 +117,10 @@ MAIN_NAMESPACE(construct_binary_tree_from_inorder_and_postorder_traversal)
 MAIN_NAMESPACE(binary_tree_level_order_traversal_ii)
 MAIN_NAMESPACE(convert_sorted_array_to_binary_search_tree)
 MAIN_NAMESPACE(convert_sorted_list_to_binary_search_tree)
+MAIN_NAMESPACE(balanced_binary_tree)
 
 int main(int argc, const char *argv[]) {
-    return convert_sorted_list_to_binary_search_tree::main(argc, argv);
+    return balanced_binary_tree::main(argc, argv);
 }
 
 
