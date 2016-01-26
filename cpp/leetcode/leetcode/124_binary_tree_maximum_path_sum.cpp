@@ -63,9 +63,9 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({1, 2, 3}, 6);
-    test({4, -2, -4}, 4);
-    test({4, -2}, 4);
+    assert(test({1, 2, 3}, 6));
+    assert(test({4, -2, -4}, 4));
+    assert(test({4, -2}, 4));
     
     return 0;
 }
