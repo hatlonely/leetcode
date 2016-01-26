@@ -129,9 +129,10 @@ MAIN_NAMESPACE(pascal_s_triangle)
 MAIN_NAMESPACE(pascal_s_triangle_ii)
 MAIN_NAMESPACE(triangle)
 MAIN_NAMESPACE(best_time_to_buy_and_sell_stock)
+MAIN_NAMESPACE(best_time_to_buy_and_sell_stock_ii)
 
 int main(int argc, const char *argv[]) {
-    return best_time_to_buy_and_sell_stock::main(argc, argv);
+    return best_time_to_buy_and_sell_stock_ii::main(argc, argv);
 }
 
 

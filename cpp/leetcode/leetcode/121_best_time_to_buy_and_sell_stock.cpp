@@ -75,9 +75,9 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({4, 3, 2, 5, 6, 8}, 6);
-    test({6, 1, 3, 2, 4, 7}, 6);
-    test({}, 0);
+    assert(test({4, 3, 2, 5, 6, 8}, 6));
+    assert(test({6, 1, 3, 2, 4, 7}, 6));
+    assert(test({}, 0));
     
     return 0;
 }
