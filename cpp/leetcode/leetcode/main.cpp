@@ -137,9 +137,10 @@ MAIN_NAMESPACE(word_ladder_ii)
 MAIN_NAMESPACE(word_ladder)
 MAIN_NAMESPACE(longest_consecutive_sequence)
 MAIN_NAMESPACE(sum_root_to_leaf_numbers)
+MAIN_NAMESPACE(surrounded_regions)
 
 int main(int argc, const char *argv[]) {
-    return sum_root_to_leaf_numbers::main(argc, argv);
+    return surrounded_regions::main(argc, argv);
 }
 
 
