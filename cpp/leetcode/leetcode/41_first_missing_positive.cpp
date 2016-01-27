@@ -28,7 +28,8 @@ public:
         int index = size - 1;
         
         while (index >= 0) {
-            if (nums[index] >= index + 1 || nums[index] <= 0 || nums[index] == nums[nums[index] - 1]) {
+            if (nums[index] >= index + 1 || nums[index] <= 0 ||
+                nums[index] == nums[nums[index] - 1]) {
                 index--;
             } else  {
                 std::swap(nums[index], nums[nums[index] - 1]);

@@ -135,9 +135,10 @@ MAIN_NAMESPACE(binary_tree_maximum_path_sum)
 MAIN_NAMESPACE(valid_palindrome)
 MAIN_NAMESPACE(word_ladder_ii)
 MAIN_NAMESPACE(word_ladder)
+MAIN_NAMESPACE(longest_consecutive_sequence)
 
 int main(int argc, const char *argv[]) {
-    return word_ladder::main(argc, argv);
+    return longest_consecutive_sequence::main(argc, argv);
 }
 
 
