@@ -63,7 +63,7 @@ public:
                             continue;
                         }
                         word2[i] = c;
-                        if (wordlist.count(word2)) {
+                        if (wordlist.count(word2) > 0) {
                             paths.insert(std::make_pair(word2, word1));
                             curr_words.insert(word2);
                         }
@@ -74,17 +74,18 @@ public:
             for (std::string word1: curr_words) {
                 wordlist.erase(word1);
             }
-            last_words = curr_words;
-            curr_words.clear();
             
             // 没有可以连接的路径
-            if (last_words.empty()) {
+            if (curr_words.empty()) {
                 return {};
             }
             // 已经找到了最短路径，不需要继续寻找
-            if (last_words.count(begin_word)) {
+            if (curr_words.count(begin_word) > 0) {
                 break;
             }
+            
+            last_words = curr_words;
+            curr_words.clear();
         }
         
         std::vector<std::string> path;

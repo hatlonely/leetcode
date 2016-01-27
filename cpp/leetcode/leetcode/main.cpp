@@ -134,9 +134,10 @@ MAIN_NAMESPACE(best_time_to_buy_and_sell_stock_iii)
 MAIN_NAMESPACE(binary_tree_maximum_path_sum)
 MAIN_NAMESPACE(valid_palindrome)
 MAIN_NAMESPACE(word_ladder_ii)
+MAIN_NAMESPACE(word_ladder)
 
 int main(int argc, const char *argv[]) {
-    return word_ladder_ii::main(argc, argv);
+    return word_ladder::main(argc, argv);
 }
 
 
