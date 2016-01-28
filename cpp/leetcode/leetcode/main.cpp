@@ -141,9 +141,10 @@ MAIN_NAMESPACE(surrounded_regions)
 MAIN_NAMESPACE(palindrome_partitioning)
 MAIN_NAMESPACE(palindrome_partitioning_ii)
 MAIN_NAMESPACE(clone_graph)
+MAIN_NAMESPACE(gas_station)
 
 int main(int argc, const char *argv[]) {
-    return clone_graph::main(argc, argv);
+    return gas_station::main(argc, argv);
 }
 
 
