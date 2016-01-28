@@ -44,7 +44,7 @@ public:
         return results[str.length()];
     }
     
-    bool is_palindrome(std::string str, int idx1, int idx2) {
+    bool is_palindrome(std::string &str, int idx1, int idx2) {
         while (idx1 < idx2 && str[idx1] == str[idx2]) {
             idx1++;
             idx2--;
@@ -65,7 +65,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test("aab", {{"aa", "b"}, {"a", "a", "b"}});
+    assert(test("aab", {{"aa", "b"}, {"a", "a", "b"}}));
     
     return 0;
 }
