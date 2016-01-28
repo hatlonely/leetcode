@@ -60,8 +60,8 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({1, 2, 3, 3}, {2, 1, 5, 1}, 3);
-    test({5}, {4}, 1);
+    assert(test({1, 2, 3, 3}, {2, 1, 5, 1}, 3));
+    assert(test({5}, {4}, 0));
     
     return 0;
 }
