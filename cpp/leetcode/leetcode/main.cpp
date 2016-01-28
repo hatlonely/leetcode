@@ -138,9 +138,10 @@ MAIN_NAMESPACE(word_ladder)
 MAIN_NAMESPACE(longest_consecutive_sequence)
 MAIN_NAMESPACE(sum_root_to_leaf_numbers)
 MAIN_NAMESPACE(surrounded_regions)
+MAIN_NAMESPACE(palindrome_partitioning)
 
 int main(int argc, const char *argv[]) {
-    return surrounded_regions::main(argc, argv);
+    return palindrome_partitioning::main(argc, argv);
 }
 
 
