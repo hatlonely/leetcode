@@ -143,9 +143,10 @@ MAIN_NAMESPACE(palindrome_partitioning_ii)
 MAIN_NAMESPACE(clone_graph)
 MAIN_NAMESPACE(gas_station)
 MAIN_NAMESPACE(candy)
+MAIN_NAMESPACE(single_num)
 
 int main(int argc, const char *argv[]) {
-    return gray_code::main(argc, argv);
+    return single_num::main(argc, argv);
 }
 
 
