@@ -263,7 +263,7 @@ int main(int argc, const char *argv[]) {
         return board == expected;
     };
     
-    test({
+    assert(test({
         {'X', 'X', 'X', 'X'},
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
@@ -273,7 +273,7 @@ int main(int argc, const char *argv[]) {
         {'X', 'X', 'X', 'X'},
         {'X', 'X', 'X', 'X'},
         {'X', 'O', 'X', 'X'},
-    });
+    }));
     
     assert(test({{'O'}}, {{'O'}}));
     
