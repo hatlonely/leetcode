@@ -29,6 +29,8 @@
 
 namespace surrounded_regions {
     
+namespace surrounded_regions_1 {
+    
 class Solution {
 public:
     void solve(std::vector<std::vector<char>> &board) {
@@ -191,11 +193,65 @@ public:
         }
     }
 };
+    
+}
+    
+namespace surrounded_regions_runtime_error  {
+
+class Solution {
+public:
+    // 这个代码在处理超大的case的时候是会堆栈溢出的，但是这个想法很好
+    void solve(std::vector<std::vector<char>> &board) {
+        if (board.empty() || board[0].empty()) {
+            return;
+        }
+        int m = (int)board.size();
+        int n = (int)board[0].size();
+        
+        for (int j = 0; j <= m - 1; j++) {
+            solve_process(board, m, n, j, 0);
+        }
+        for (int j = 0; j <= n - 1; j++) {
+            solve_process(board, m, n, m - 1, j);
+        }
+        for (int j = m - 1; j >= 0; j--) {
+            solve_process(board, m, n, j, n - 1);
+        }
+        for (int j = n - 1; j >= 0; j--) {
+            solve_process(board, m, n, 0, j);
+        }
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == 'O') {
+                    board[i][j] = 'X';
+                }
+                if (board[i][j] == '@') {
+                    board[i][j] = 'O';
+                }
+            }
+        }
+    }
+    
+    void solve_process(std::vector<std::vector<char>> &board, int m, int n, int x, int y) {
+        if (x < 0 || y < 0 || x >= m || y >= n || board[x][y] != 'O') {
+            return;
+        }
+        board[x][y] = '@';
+        solve_process(board, m, n, x - 1, y);
+        solve_process(board, m, n, x + 1, y);
+        solve_process(board, m, n, x, y - 1);
+        solve_process(board, m, n, x, y + 1);
+    }
+};
+
+}
+
 
 int main(int argc, const char *argv[]) {
     auto test = [](std::vector<std::vector<char>> vvc,
                    std::vector<std::vector<char>> expected) {
-        Solution solution;
+        surrounded_regions_runtime_error::Solution solution;
         std::vector<std::vector<char>> board(vvc);
         solution.solve(board);
         for (auto &vc: board) {
@@ -207,7 +263,7 @@ int main(int argc, const char *argv[]) {
         return board == expected;
     };
     
-    assert(test({
+    test({
         {'X', 'X', 'X', 'X'},
         {'X', 'O', 'O', 'X'},
         {'X', 'X', 'O', 'X'},
@@ -217,7 +273,7 @@ int main(int argc, const char *argv[]) {
         {'X', 'X', 'X', 'X'},
         {'X', 'X', 'X', 'X'},
         {'X', 'O', 'X', 'X'},
-    }));
+    });
     
     assert(test({{'O'}}, {{'O'}}));
     
