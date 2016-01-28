@@ -145,7 +145,7 @@ MAIN_NAMESPACE(gas_station)
 MAIN_NAMESPACE(candy)
 
 int main(int argc, const char *argv[]) {
-    return candy::main(argc, argv);
+    return scramble_string::main(argc, argv);
 }
 
 

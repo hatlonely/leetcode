@@ -145,9 +145,9 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test("great", "rgtae", true);
-    test("abc", "cba", true);
-    test("abb", "bab", true);
+    assert(test("great", "rgtae", true));
+    assert(test("abc", "cba", true));
+    assert(test("abb", "bab", true));
     
     return 0;
 }
