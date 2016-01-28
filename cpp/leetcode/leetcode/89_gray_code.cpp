@@ -44,7 +44,7 @@ public:
                 code_next.push_back(*it | (1 << m));
             }
 
-            gray_code_n.push_back(code_next);
+            gray_code_n.push_back(std::move(code_next));
             m++;
         }
         
