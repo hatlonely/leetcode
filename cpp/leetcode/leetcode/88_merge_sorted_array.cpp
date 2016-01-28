@@ -38,7 +38,7 @@ class Solution {
 public:
     void merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, int n) {
         std::merge(nums1.rend() - m, nums1.rend(), nums2.rend() - n, nums2.rend(),
-                   nums1.rend() - m -n, std::greater<int>());
+                   nums1.rend() - m - n, std::greater<int>());
     }
 };
     
