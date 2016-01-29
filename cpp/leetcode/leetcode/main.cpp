@@ -145,9 +145,10 @@ MAIN_NAMESPACE(gas_station)
 MAIN_NAMESPACE(candy)
 MAIN_NAMESPACE(single_num)
 MAIN_NAMESPACE(single_number_ii)
+MAIN_NAMESPACE(copy_list_with_random_pointer)
 
 int main(int argc, const char *argv[]) {
-    return single_number_ii::main(argc, argv);
+    return copy_list_with_random_pointer::main(argc, argv);
 }
 
 
