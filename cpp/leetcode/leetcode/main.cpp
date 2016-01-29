@@ -152,9 +152,10 @@ MAIN_NAMESPACE(linked_list_cycle)
 MAIN_NAMESPACE(linked_list_cycle_ii)
 MAIN_NAMESPACE(reorder_list)
 MAIN_NAMESPACE(binary_tree_preorder_traversal)
+MAIN_NAMESPACE(binary_tree_postorder_traversal)
 
 int main(int argc, const char *argv[]) {
-    return binary_tree_preorder_traversal::main(argc, argv);
+    return binary_tree_postorder_traversal::main(argc, argv);
 }
 
 
