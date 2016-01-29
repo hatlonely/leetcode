@@ -144,9 +144,10 @@ MAIN_NAMESPACE(clone_graph)
 MAIN_NAMESPACE(gas_station)
 MAIN_NAMESPACE(candy)
 MAIN_NAMESPACE(single_num)
+MAIN_NAMESPACE(single_number_ii)
 
 int main(int argc, const char *argv[]) {
-    return single_num::main(argc, argv);
+    return single_number_ii::main(argc, argv);
 }
 
 
