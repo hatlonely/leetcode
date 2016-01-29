@@ -146,9 +146,10 @@ MAIN_NAMESPACE(candy)
 MAIN_NAMESPACE(single_num)
 MAIN_NAMESPACE(single_number_ii)
 MAIN_NAMESPACE(copy_list_with_random_pointer)
+MAIN_NAMESPACE(word_break)
 
 int main(int argc, const char *argv[]) {
-    return copy_list_with_random_pointer::main(argc, argv);
+    return word_break::main(argc, argv);
 }
 
 
