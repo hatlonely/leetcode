@@ -5,6 +5,8 @@
 //  Created by hatlonely on 16/1/29.
 //  Copyright © 2016年 hatlonely. All rights reserved.
 //
+//  Given a linked list, determine if it has a cycle in it.
+//
 
 #include <iostream>
 #include <cassert>
@@ -27,8 +29,7 @@ public:
                 return false;
             }
             node1 = node1->next;
-            node2 = node2->next;
-            node2 = node2->next;
+            node2 = node2->next->next;
         }
         
         return true;
