@@ -147,9 +147,10 @@ MAIN_NAMESPACE(single_num)
 MAIN_NAMESPACE(single_number_ii)
 MAIN_NAMESPACE(copy_list_with_random_pointer)
 MAIN_NAMESPACE(word_break)
+MAIN_NAMESPACE(word_break_ii)
 
 int main(int argc, const char *argv[]) {
-    return word_break::main(argc, argv);
+    return word_break_ii::main(argc, argv);
 }
 
 
