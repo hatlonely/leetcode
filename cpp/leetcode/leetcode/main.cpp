@@ -150,9 +150,10 @@ MAIN_NAMESPACE(word_break)
 MAIN_NAMESPACE(word_break_ii)
 MAIN_NAMESPACE(linked_list_cycle)
 MAIN_NAMESPACE(linked_list_cycle_ii)
+MAIN_NAMESPACE(reorder_list)
 
 int main(int argc, const char *argv[]) {
-    return linked_list_cycle_ii::main(argc, argv);
+    return reorder_list::main(argc, argv);
 }
 
 
