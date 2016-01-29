@@ -74,7 +74,7 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test("catsanddog", {"cat", "cats", "and", "sand", "dog"}, {"cats and dog", "cat sand dog"});
+    assert(test("catsanddog", {"cat", "cats", "and", "sand", "dog"}, {"cats and dog", "cat sand dog"}));
     
     return 0;
 }
