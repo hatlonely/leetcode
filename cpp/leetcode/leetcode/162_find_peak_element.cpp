@@ -30,16 +30,18 @@ namespace find_peak_element {
 class Solution {
 public:
     int findPeakElement(std::vector<int> &nums) {
-        if (nums.empty()) {
-            return -1;
+        int idx1 = 0;
+        int idx2 = (int)nums.size() - 1;
+        while (idx1 < idx2) {
+            int mid = (idx1 + idx2) / 2;
+            if (nums[mid] < nums[mid + 1]) {
+                idx1 = mid + 1;
+            } else {
+                idx2 = mid;
+            }
         }
         
-        int idx = 1;
-        while (idx < nums.size() && nums[idx - 1] < nums[idx]) {
-            idx++;
-        }
-        
-        return idx - 1;
+        return idx1;
     }
 };
 
