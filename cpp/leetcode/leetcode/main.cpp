@@ -159,9 +159,10 @@ MAIN_NAMESPACE(sort_list)
 MAIN_NAMESPACE(max_points_on_a_line)
 MAIN_NAMESPACE(evaluate_reverse_polish_notation)
 MAIN_NAMESPACE(reverse_words_in_a_string)
+MAIN_NAMESPACE(maximum_product_subarray)
 
 int main(int argc, const char *argv[]) {
-    return reverse_words_in_a_string::main(argc, argv);
+    return maximum_product_subarray::main(argc, argv);
 }
 
 
