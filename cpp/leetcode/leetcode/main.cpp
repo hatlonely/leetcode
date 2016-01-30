@@ -161,9 +161,10 @@ MAIN_NAMESPACE(evaluate_reverse_polish_notation)
 MAIN_NAMESPACE(reverse_words_in_a_string)
 MAIN_NAMESPACE(maximum_product_subarray)
 MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array)
+MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array_ii)
 
 int main(int argc, const char *argv[]) {
-    return find_minimum_in_rotated_sorted_array::main(argc, argv);
+    return find_minimum_in_rotated_sorted_array_ii::main(argc, argv);
 }
 
 
