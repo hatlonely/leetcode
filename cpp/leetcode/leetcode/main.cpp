@@ -154,9 +154,10 @@ MAIN_NAMESPACE(reorder_list)
 MAIN_NAMESPACE(binary_tree_preorder_traversal)
 MAIN_NAMESPACE(binary_tree_postorder_traversal)
 MAIN_NAMESPACE(lru_cache)
+MAIN_NAMESPACE(insertion_sort_list)
 
 int main(int argc, const char *argv[]) {
-    return lru_cache::main(argc, argv);
+    return insertion_sort_list::main(argc, argv);
 }
 
 
