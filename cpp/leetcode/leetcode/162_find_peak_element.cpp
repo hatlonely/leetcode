@@ -26,6 +26,8 @@
 #include <vector>
 
 namespace find_peak_element {
+
+namespace find_peak_element_1 {
     
 class Solution {
 public:
@@ -44,10 +46,28 @@ public:
         return idx1;
     }
 };
+    
+}
+    
+namespace find_peak_element_2 {
+
+class Solution {
+public:
+    int findPeakElement(std::vector<int> &nums) {
+        for (int i = 0; i < (int)nums.size() - 1; i++) {
+            if (nums[i] > nums[i + 1]) {
+                return i;
+            }
+        }
+        return (int)nums.size() - 1;
+    }
+};
+
+}
 
 int main(int argc, const char *argv[]) {
     auto test = [](std::initializer_list<int> li, int expected) {
-        Solution solution;
+        find_peak_element_1::Solution solution;
         std::vector<int> nums(li);
         int result = solution.findPeakElement(nums);
         std::cout << result << std::endl;
