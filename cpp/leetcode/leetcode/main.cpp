@@ -160,9 +160,10 @@ MAIN_NAMESPACE(max_points_on_a_line)
 MAIN_NAMESPACE(evaluate_reverse_polish_notation)
 MAIN_NAMESPACE(reverse_words_in_a_string)
 MAIN_NAMESPACE(maximum_product_subarray)
+MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array)
 
 int main(int argc, const char *argv[]) {
-    return maximum_product_subarray::main(argc, argv);
+    return find_minimum_in_rotated_sorted_array::main(argc, argv);
 }
 
 
