@@ -163,9 +163,10 @@ MAIN_NAMESPACE(maximum_product_subarray)
 MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array)
 MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array_ii)
 MAIN_NAMESPACE(min_stack)
+MAIN_NAMESPACE(intersection_of_two_linked_lists)
 
 int main(int argc, const char *argv[]) {
-    return min_stack::main(argc, argv);
+    return intersection_of_two_linked_lists::main(argc, argv);
 }
 
 
