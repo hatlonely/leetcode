@@ -164,9 +164,10 @@ MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array)
 MAIN_NAMESPACE(find_minimum_in_rotated_sorted_array_ii)
 MAIN_NAMESPACE(min_stack)
 MAIN_NAMESPACE(intersection_of_two_linked_lists)
+MAIN_NAMESPACE(find_peak_element)
 
 int main(int argc, const char *argv[]) {
-    return intersection_of_two_linked_lists::main(argc, argv);
+    return find_peak_element::main(argc, argv);
 }
 
 
