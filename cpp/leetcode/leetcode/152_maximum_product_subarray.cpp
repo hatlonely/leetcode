@@ -30,6 +30,7 @@ public:
         int idx1 = 0;
         int idx2 = 0;
         int max_product = std::numeric_limits<int>::min();
+        // 用 0 将数组分割成几个部分
         while (idx1 < size) {
             while (idx1 < size && nums[idx1] == 0) {
                 idx1++;
@@ -52,43 +53,54 @@ public:
         return max_product;
     }
     
+    // 不包含 0 的数组的最大乘积
     int max_product_without_zero(std::vector<int> &nums, int start, int end) {
         int idx1 = start;
         int idx2 = end;
+        // 寻找左边的负数
         while (idx1 <= idx2 && nums[idx1] > 0) {
             idx1++;
         }
+        // 寻找右边的负数
         while (idx1 <= idx2 && nums[idx2] > 0) {
             idx2--;
         }
         if (idx1 > idx2) {
+            // 全为正数
             return product_array(nums, start, end);
         } else if (idx1 == idx2) {
+            // 只有一个数并且为负数
             if (start == end) {
                 return nums[start];
             }
+            // 第一个数为负数
             if (idx1 == start) {
                 return product_array(nums, start + 1, end);
             }
+            // 最后一个数为负数
             if (idx2 == end) {
                 return product_array(nums, start, end - 1);
             }
             return std::max(product_array(nums, start, idx1 - 1), product_array(nums, idx2 + 1, end));
         } else {
-            int count = 0;
+            // idx1 和 idx2 是两个不同的负数
+            int count = 0;  // idx1 idx2 之间负数的个数
             for (int i = idx1 + 1; i < idx2; i++) {
                 if (nums[i] < 0) {
                     count++;
                 }
             }
             if (count % 2 == 0) {
+                // 偶数个负数
                 return product_array(nums, start, end);
             } else {
+                // 奇数个负数
                 return std::max(product_array(nums, start, idx2 - 1), product_array(nums, idx1 + 1, end));
             }
         }
     }
     
+    // start end 之间的数的乘积
     int product_array(std::vector<int> &nums, int start, int end) {
         int product = 1;
         for (int i = start; i <= end; i++) {
