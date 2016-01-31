@@ -20,7 +20,6 @@
 //  桶排序
 //
 
-
 #include <iostream>
 #include <cassert>
 #include <vector>
