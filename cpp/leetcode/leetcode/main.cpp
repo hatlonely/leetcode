@@ -170,9 +170,10 @@ MAIN_NAMESPACE(compare_version_numbers)
 MAIN_NAMESPACE(fraction_to_recurring_decimal)
 MAIN_NAMESPACE(excel_sheet_column_title)
 MAIN_NAMESPACE(majority_element)
+MAIN_NAMESPACE(excel_sheet_column_number)
 
 int main(int argc, const char *argv[]) {
-    return majority_element::main(argc, argv);
+    return excel_sheet_column_number::main(argc, argv);
 }
 
 
