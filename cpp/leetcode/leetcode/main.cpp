@@ -167,9 +167,10 @@ MAIN_NAMESPACE(intersection_of_two_linked_lists)
 MAIN_NAMESPACE(find_peak_element)
 MAIN_NAMESPACE(maximum_gap)
 MAIN_NAMESPACE(compare_version_numbers)
+MAIN_NAMESPACE(fraction_to_recurring_decimal)
 
 int main(int argc, const char *argv[]) {
-    return compare_version_numbers::main(argc, argv);
+    return fraction_to_recurring_decimal::main(argc, argv);
 }
 
 
