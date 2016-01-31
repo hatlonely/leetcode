@@ -169,9 +169,10 @@ MAIN_NAMESPACE(maximum_gap)
 MAIN_NAMESPACE(compare_version_numbers)
 MAIN_NAMESPACE(fraction_to_recurring_decimal)
 MAIN_NAMESPACE(excel_sheet_column_title)
+MAIN_NAMESPACE(majority_element)
 
 int main(int argc, const char *argv[]) {
-    return excel_sheet_column_title::main(argc, argv);
+    return majority_element::main(argc, argv);
 }
 
 
