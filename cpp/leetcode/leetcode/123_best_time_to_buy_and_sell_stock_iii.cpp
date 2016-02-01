@@ -26,7 +26,7 @@ public:
         std::vector<int> profits(size + 1, 0);
         
         int max_profit = 0;
-        int min_price  = INT_MAX;
+        int min_price  = std::numeric_limits<int>::max();
         for (int i = 0; i < size; i++) {
             min_price  = std::min(min_price, prices[i]);
             max_profit = std::max(max_profit, prices[i] - min_price);
@@ -34,7 +34,7 @@ public:
         }
         
         max_profit = 0;
-        int max_price  = INT_MIN;
+        int max_price  = std::numeric_limits<int>::min();
         for (int i = size - 1; i >= 0; i--) {
             max_price  = std::max(max_price, prices[i]);
             max_profit = std::max(max_profit, max_price - prices[i]);
