@@ -179,9 +179,10 @@ MAIN_NAMESPACE(repeated_dna_sequences)
 MAIN_NAMESPACE(best_time_to_buy_and_sell_stock_iv)
 MAIN_NAMESPACE(rotate_array)
 MAIN_NAMESPACE(reverse_bits)
+MAIN_NAMESPACE(number_of_1_bits)
 
 int main(int argc, const char *argv[]) {
-    return reverse_bits::main(argc, argv);
+    return number_of_1_bits::main(argc, argv);
 }
 
 
