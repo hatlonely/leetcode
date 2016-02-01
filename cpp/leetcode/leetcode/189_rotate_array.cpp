@@ -44,7 +44,7 @@ int main(int argc, const char *argv[]) {
         return nums == expected;
     };
     
-    test({1, 2, 3, 4, 5, 6, 7}, 3, {5, 6, 7, 1, 2, 3, 4});
+    assert(test({1, 2, 3, 4, 5, 6, 7}, 3, {5, 6, 7, 1, 2, 3, 4}));
     
     return 0;
 }
