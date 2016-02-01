@@ -28,9 +28,7 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
-#include <stack>
 #include <queue>
-#include <list>
 
 namespace number_of_islands {
     
