@@ -22,13 +22,13 @@ namespace best_time_to_buy_and_sell_stock_ii {
 class Solution {
 public:
     int maxProfit(std::vector<int> &prices) {
-        int max_prices = 0;
+        int max_profit = 0;
         for (int i = 1; i < (int)prices.size(); i++) {
             if (prices[i] > prices[i - 1]) {
-                max_prices += prices[i] - prices[i - 1];
+                max_profit += prices[i] - prices[i - 1];
             }
         }
-        return max_prices;
+        return max_profit;
     }
 };
 
