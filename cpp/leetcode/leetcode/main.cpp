@@ -183,9 +183,10 @@ MAIN_NAMESPACE(number_of_1_bits)
 MAIN_NAMESPACE(house_robber)
 MAIN_NAMESPACE(binary_tree_right_side_view)
 MAIN_NAMESPACE(number_of_islands)
+MAIN_NAMESPACE(bitwise_and_of_numbers_range)
 
 int main(int argc, const char *argv[]) {
-    return number_of_islands::main(argc, argv);
+    return bitwise_and_of_numbers_range::main(argc, argv);
 }
 
 
