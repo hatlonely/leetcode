@@ -172,9 +172,10 @@ MAIN_NAMESPACE(excel_sheet_column_title)
 MAIN_NAMESPACE(majority_element)
 MAIN_NAMESPACE(excel_sheet_column_number)
 MAIN_NAMESPACE(factorial_trailing_zeroes)
+MAIN_NAMESPACE(binary_search_tree_iterator)
 
 int main(int argc, const char *argv[]) {
-    return factorial_trailing_zeroes::main(argc, argv);
+    return binary_search_tree_iterator::main(argc, argv);
 }
 
 
