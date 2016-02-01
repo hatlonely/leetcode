@@ -181,9 +181,10 @@ MAIN_NAMESPACE(rotate_array)
 MAIN_NAMESPACE(reverse_bits)
 MAIN_NAMESPACE(number_of_1_bits)
 MAIN_NAMESPACE(house_robber)
+MAIN_NAMESPACE(binary_tree_right_side_view)
 
 int main(int argc, const char *argv[]) {
-    return house_robber::main(argc, argv);
+    return binary_tree_right_side_view::main(argc, argv);
 }
 
 
