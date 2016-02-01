@@ -177,9 +177,10 @@ MAIN_NAMESPACE(dungeon_game)
 MAIN_NAMESPACE(largest_number)
 MAIN_NAMESPACE(repeated_dna_sequences)
 MAIN_NAMESPACE(best_time_to_buy_and_sell_stock_iv)
+MAIN_NAMESPACE(rotate_array)
 
 int main(int argc, const char *argv[]) {
-    return best_time_to_buy_and_sell_stock_iv::main(argc, argv);
+    return rotate_array::main(argc, argv);
 }
 
 
