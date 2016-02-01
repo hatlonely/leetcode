@@ -175,9 +175,10 @@ MAIN_NAMESPACE(factorial_trailing_zeroes)
 MAIN_NAMESPACE(binary_search_tree_iterator)
 MAIN_NAMESPACE(dungeon_game)
 MAIN_NAMESPACE(largest_number)
+MAIN_NAMESPACE(repeated_dna_sequences)
 
 int main(int argc, const char *argv[]) {
-    return largest_number::main(argc, argv);
+    return repeated_dna_sequences::main(argc, argv);
 }
 
 
