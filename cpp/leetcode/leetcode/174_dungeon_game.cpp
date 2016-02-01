@@ -92,14 +92,14 @@ int main(int argc, const char *argv[]) {
         return result == expected;
     };
     
-    test({
+    assert(test({
         {-2, -3, 3},
         {-5, -10, 1},
         {10, 30, -5}
-    }, 7);
+    }, 7));
     
-    test({{100}}, 1);
-    test({{-1, 1}}, 2);
+    assert(test({{100}}, 1));
+    assert(test({{-1, 1}}, 2));
     
     return 0;
 }

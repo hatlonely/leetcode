@@ -174,9 +174,10 @@ MAIN_NAMESPACE(excel_sheet_column_number)
 MAIN_NAMESPACE(factorial_trailing_zeroes)
 MAIN_NAMESPACE(binary_search_tree_iterator)
 MAIN_NAMESPACE(dungeon_game)
+MAIN_NAMESPACE(largest_number)
 
 int main(int argc, const char *argv[]) {
-    return dungeon_game::main(argc, argv);
+    return largest_number::main(argc, argv);
 }
 
 
