@@ -180,9 +180,10 @@ MAIN_NAMESPACE(best_time_to_buy_and_sell_stock_iv)
 MAIN_NAMESPACE(rotate_array)
 MAIN_NAMESPACE(reverse_bits)
 MAIN_NAMESPACE(number_of_1_bits)
+MAIN_NAMESPACE(house_robber)
 
 int main(int argc, const char *argv[]) {
-    return number_of_1_bits::main(argc, argv);
+    return house_robber::main(argc, argv);
 }
 
 
