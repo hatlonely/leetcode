@@ -185,9 +185,10 @@ MAIN_NAMESPACE(binary_tree_right_side_view)
 MAIN_NAMESPACE(number_of_islands)
 MAIN_NAMESPACE(bitwise_and_of_numbers_range)
 MAIN_NAMESPACE(happy_number)
+MAIN_NAMESPACE(remove_linked_list_elements)
 
 int main(int argc, const char *argv[]) {
-    return happy_number::main(argc, argv);
+    return remove_linked_list_elements::main(argc, argv);
 }
 
 
