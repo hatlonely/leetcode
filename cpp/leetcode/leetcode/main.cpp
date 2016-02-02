@@ -184,9 +184,10 @@ MAIN_NAMESPACE(house_robber)
 MAIN_NAMESPACE(binary_tree_right_side_view)
 MAIN_NAMESPACE(number_of_islands)
 MAIN_NAMESPACE(bitwise_and_of_numbers_range)
+MAIN_NAMESPACE(happy_number)
 
 int main(int argc, const char *argv[]) {
-    return bitwise_and_of_numbers_range::main(argc, argv);
+    return happy_number::main(argc, argv);
 }
 
 
