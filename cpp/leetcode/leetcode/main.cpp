@@ -191,9 +191,10 @@ MAIN_NAMESPACE(isomorphic_strings)
 MAIN_NAMESPACE(reverse_linked_list)
 MAIN_NAMESPACE(course_schedule)
 MAIN_NAMESPACE(implement_trie)
+MAIN_NAMESPACE(minimum_size_subarray_sum)
 
 int main(int argc, const char *argv[]) {
-    return implement_trie::main(argc, argv);
+    return minimum_size_subarray_sum::main(argc, argv);
 }
 
 
