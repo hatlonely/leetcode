@@ -189,9 +189,10 @@ MAIN_NAMESPACE(remove_linked_list_elements)
 MAIN_NAMESPACE(count_primes)
 MAIN_NAMESPACE(isomorphic_strings)
 MAIN_NAMESPACE(reverse_linked_list)
+MAIN_NAMESPACE(course_schedule)
 
 int main(int argc, const char *argv[]) {
-    return reverse_linked_list::main(argc, argv);
+    return course_schedule::main(argc, argv);
 }
 
 
