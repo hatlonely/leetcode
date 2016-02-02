@@ -187,9 +187,10 @@ MAIN_NAMESPACE(bitwise_and_of_numbers_range)
 MAIN_NAMESPACE(happy_number)
 MAIN_NAMESPACE(remove_linked_list_elements)
 MAIN_NAMESPACE(count_primes)
+MAIN_NAMESPACE(isomorphic_strings)
 
 int main(int argc, const char *argv[]) {
-    return count_primes::main(argc, argv);
+    return isomorphic_strings::main(argc, argv);
 }
 
 
