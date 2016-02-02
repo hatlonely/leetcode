@@ -186,9 +186,10 @@ MAIN_NAMESPACE(number_of_islands)
 MAIN_NAMESPACE(bitwise_and_of_numbers_range)
 MAIN_NAMESPACE(happy_number)
 MAIN_NAMESPACE(remove_linked_list_elements)
+MAIN_NAMESPACE(count_primes)
 
 int main(int argc, const char *argv[]) {
-    return remove_linked_list_elements::main(argc, argv);
+    return count_primes::main(argc, argv);
 }
 
 
