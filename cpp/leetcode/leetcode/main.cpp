@@ -190,9 +190,10 @@ MAIN_NAMESPACE(count_primes)
 MAIN_NAMESPACE(isomorphic_strings)
 MAIN_NAMESPACE(reverse_linked_list)
 MAIN_NAMESPACE(course_schedule)
+MAIN_NAMESPACE(implement_trie)
 
 int main(int argc, const char *argv[]) {
-    return course_schedule::main(argc, argv);
+    return implement_trie::main(argc, argv);
 }
 
 
