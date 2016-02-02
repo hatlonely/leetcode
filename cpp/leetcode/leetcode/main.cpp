@@ -188,9 +188,10 @@ MAIN_NAMESPACE(happy_number)
 MAIN_NAMESPACE(remove_linked_list_elements)
 MAIN_NAMESPACE(count_primes)
 MAIN_NAMESPACE(isomorphic_strings)
+MAIN_NAMESPACE(reverse_linked_list)
 
 int main(int argc, const char *argv[]) {
-    return isomorphic_strings::main(argc, argv);
+    return reverse_linked_list::main(argc, argv);
 }
 
 
