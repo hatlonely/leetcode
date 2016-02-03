@@ -196,9 +196,10 @@ MAIN_NAMESPACE(course_schedule_ii)
 MAIN_NAMESPACE(add_and_search_word)
 MAIN_NAMESPACE(word_search_ii)
 MAIN_NAMESPACE(house_robber_ii)
+MAIN_NAMESPACE(shortest_palindrome)
 
 int main(int argc, const char *argv[]) {
-    return house_robber_ii::main(argc, argv);
+    return shortest_palindrome::main(argc, argv);
 }
 
 
