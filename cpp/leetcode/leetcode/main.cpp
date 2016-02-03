@@ -194,9 +194,10 @@ MAIN_NAMESPACE(implement_trie)
 MAIN_NAMESPACE(minimum_size_subarray_sum)
 MAIN_NAMESPACE(course_schedule_ii)
 MAIN_NAMESPACE(add_and_search_word)
+MAIN_NAMESPACE(word_search_ii)
 
 int main(int argc, const char *argv[]) {
-    return add_and_search_word::main(argc, argv);
+    return word_search_ii::main(argc, argv);
 }
 
 
