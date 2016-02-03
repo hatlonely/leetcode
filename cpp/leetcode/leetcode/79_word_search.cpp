@@ -33,71 +33,43 @@ namespace word_search {
 class Solution {
 public:
     bool exist(std::vector<std::vector<char>> &board, std::string word) {
-        if (board.empty()) {
-            return false;
-        }
-        if (board[0].empty()) {
+        if (board.empty() || board[0].empty()) {
             return false;
         }
         
         int m = (int)board.size();
         int n = (int)board[0].size();
-        
-        std::vector<std::vector<bool>> visit(m, std::vector<bool>(n, false));
+        int len = (int)word.length();
+        std::vector<std::vector<bool>> visited(m, std::vector<bool>(n, false));
         
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (board[i][j] == word[0]) {
-                    visit[i][j] = true;
-                    bool is_exists = exist_process(i, j, m, n, visit, board, word.substr(1));
-                    if (is_exists) {
-                        return true;
-                    }
-                    visit[i][j] = false;
+                if (exist_process(board, i, j, m, n, visited, word, 0, len)) {
+                    return true;
                 }
             }
         }
+        
         return false;
     }
     
-    bool exist_process(int i, int j, int m, int n,
-                       std::vector<std::vector<bool>> &visit,
-                       std::vector<std::vector<char>> &board, std::string word) {
-        if (word.empty()) {
+    bool exist_process(std::vector<std::vector<char>> &board, int x, int y, int m, int n,
+                       std::vector<std::vector<bool>> &visited,
+                       std::string &word, int idx, int len) {
+        if (idx == len) {
             return true;
         }
         
-        if (i > 0 && board[i - 1][j] == word[0] && !visit[i - 1][j]) {
-            visit[i - 1][j] = true;
-            bool is_exists = exist_process(i - 1, j, m, n, visit, board, word.substr(1));
-            visit[i - 1][j] = false;
-            if (is_exists) {
+        if (x >= 0 && x < m && y >= 0 && y < n && !visited[x][y] && board[x][y] == word[idx]) {
+            visited[x][y] = true;
+            if (exist_process(board, x + 1, y, m, n, visited, word, idx + 1, len) ||
+                exist_process(board, x - 1, y, m, n, visited, word, idx + 1, len) ||
+                exist_process(board, x, y + 1, m, n, visited, word, idx + 1, len) ||
+                exist_process(board, x, y - 1, m, n, visited, word, idx + 1, len)) {
+                visited[x][y] = false;
                 return true;
             }
-        }
-        if (j > 0 && board[i][j - 1] == word[0] && !visit[i][j - 1]) {
-            visit[i][j - 1] = true;
-            bool is_exists = exist_process(i, j - 1, m, n, visit, board, word.substr(1));
-            visit[i][j - 1] = false;
-            if (is_exists) {
-                return true;
-            }
-        }
-        if (i < m - 1 && board[i + 1][j] == word[0] && !visit[i + 1][j]) {
-            visit[i + 1][j] = true;
-            bool is_exists = exist_process(i + 1, j, m, n, visit, board, word.substr(1));
-            visit[i + 1][j] = false;
-            if (is_exists) {
-                return true;
-            }
-        }
-        if (j < n - 1 && board[i][j + 1] == word[0] && !visit[i][j + 1]) {
-            visit[i][j + 1] = true;
-            bool is_exists = exist_process(i, j + 1, m, n, visit, board, word.substr(1));
-            visit[i][j + 1] = false;
-            if (is_exists) {
-                return true;
-            }
+            visited[x][y] = false;
         }
         return false;
     }
@@ -118,10 +90,10 @@ int main(int argc, const char *argv[]) {
         {'A','D','E','E'}
     };
     
-    test(board, "ABCCED", true);
-    test(board, "SEE", true);
-    test(board, "ABCB", false);
-    test({{'a'}}, "ab", false);
+    assert(test(board, "ABCCED", true));
+    assert(test(board, "SEE", true));
+    assert(test(board, "ABCB", false));
+    assert(test({{'a'}}, "ab", false));
     
     return 0;
 }

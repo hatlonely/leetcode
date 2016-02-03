@@ -197,7 +197,7 @@ MAIN_NAMESPACE(add_and_search_word)
 MAIN_NAMESPACE(word_search_ii)
 
 int main(int argc, const char *argv[]) {
-    return word_search_ii::main(argc, argv);
+    return word_search::main(argc, argv);
 }
 
 
