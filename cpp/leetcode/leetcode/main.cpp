@@ -195,9 +195,10 @@ MAIN_NAMESPACE(minimum_size_subarray_sum)
 MAIN_NAMESPACE(course_schedule_ii)
 MAIN_NAMESPACE(add_and_search_word)
 MAIN_NAMESPACE(word_search_ii)
+MAIN_NAMESPACE(house_robber_ii)
 
 int main(int argc, const char *argv[]) {
-    return word_search::main(argc, argv);
+    return house_robber_ii::main(argc, argv);
 }
 
 
