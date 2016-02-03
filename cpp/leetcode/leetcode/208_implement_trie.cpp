@@ -30,21 +30,21 @@ class Trie {
     };
 public:
     Trie() {
-        root = new node_t;
+        _root = new node_t;
     }
     
     ~Trie() {
         std::stack<node_t *> nodes;
-        nodes.push(root);
+        nodes.push(_root);
         while (!nodes.empty()) {
-            node_t *curr = nodes.top();
+            node_t *node = nodes.top();
             nodes.pop();
-            for (node_t *node : curr->nexts) {
-                if (node != nullptr) {
-                    nodes.push(node);
+            for (node_t *next : node->nexts) {
+                if (next != nullptr) {
+                    nodes.push(next);
                 }
             }
-            delete curr;
+            delete node;
         }
     }
     
@@ -52,7 +52,7 @@ public:
         if (word.empty()) {
             return;
         }
-        node_t *node = root;
+        node_t *node = _root;
         for (char ch : word) {
             if (node->nexts[ch - 'a'] == nullptr) {
                 node->nexts[ch - 'a'] = new node_t;
@@ -63,7 +63,7 @@ public:
     }
     
     bool search(std::string word) {
-        node_t *node = root;
+        node_t *node = _root;
         for (char ch : word) {
             if (node->nexts[ch - 'a'] == nullptr) {
                 return false;
@@ -75,7 +75,7 @@ public:
     }
 
     bool startsWith(std::string prefix) {
-        node_t *node = root;
+        node_t *node = _root;
         for (char ch : prefix) {
             if (node->nexts[ch - 'a'] == nullptr) {
                 return false;
@@ -87,7 +87,7 @@ public:
     }
     
 private:
-    node_t *root;
+    node_t *_root;
 };
 
 int main(int argc, const char *argv[]) {
