@@ -61,10 +61,10 @@ public:
                 pos = std::max(pos, i);
             }
         }
-        pos--;
         
-        std::string prefix = str.substr(pos);
+        std::string prefix = str.substr(pos - 1);
         std::reverse(prefix.begin(), prefix.end());
+        
         return prefix + str;
     }
 };
