@@ -199,9 +199,10 @@ MAIN_NAMESPACE(house_robber_ii)
 MAIN_NAMESPACE(shortest_palindrome)
 MAIN_NAMESPACE(kth_largest_element_in_an_array)
 MAIN_NAMESPACE(combination_sum_iii)
+MAIN_NAMESPACE(contains_duplicate)
 
 int main(int argc, const char *argv[]) {
-    return combination_sum_iii::main(argc, argv);
+    return contains_duplicate::main(argc, argv);
 }
 
 
