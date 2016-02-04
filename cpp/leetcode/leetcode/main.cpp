@@ -197,9 +197,10 @@ MAIN_NAMESPACE(add_and_search_word)
 MAIN_NAMESPACE(word_search_ii)
 MAIN_NAMESPACE(house_robber_ii)
 MAIN_NAMESPACE(shortest_palindrome)
+MAIN_NAMESPACE(kth_largest_element_in_an_array)
 
 int main(int argc, const char *argv[]) {
-    return shortest_palindrome::main(argc, argv);
+    return kth_largest_element_in_an_array::main(argc, argv);
 }
 
 
