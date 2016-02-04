@@ -21,41 +21,19 @@
 namespace largest_number {
     
 class Solution {
-    struct string_compare_t {
-        bool operator ()(std::string str1, std::string str2) {
-            int len1 = (int)str1.length();
-            int len2 = (int)str2.length();
-            int idx1 = 0;
-            int idx2 = 0;
-            while (idx1 < len1 && idx2 < len2 && str1[idx1] == str2[idx2]) {
-                idx1++;
-                idx2++;
-            }
-            
-            if (idx1 == len1 && idx2 == len2) {
-                return false;
-            }
-            if (idx1 == len1) {
-                return (*this)(str1, str2.substr(idx2));
-            }
-            if (idx2 == len2) {
-                return (*this)(str1.substr(idx1), str2);
-            }
-            return str1[idx1] > str2[idx2];
-        }
-    };
-    
 public:
     std::string largestNumber(std::vector<int> &nums) {
         std::vector<std::string> strs(nums.size());
         std::transform(nums.begin(), nums.end(), strs.begin(), [](const int &num) {
             return std::to_string(num);
         });
-        std::sort(strs.begin(), strs.end(), string_compare_t());
+        std::sort(strs.begin(), strs.end(), [](const std::string &str1, const std::string &str2) {
+            return str1 + str2 > str2 + str1;
+        });
         std::stringstream result_stream;
         std::copy(strs.begin(), strs.end(), std::ostream_iterator<std::string>(result_stream, ""));
         std::string result = result_stream.str();
-        if (std::all_of(result.begin(), result.end(), [](const char &ch) { return ch == '0'; })) {
+        if (result[0] == '0') {
             return "0";
         }
         

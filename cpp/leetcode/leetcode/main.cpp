@@ -200,7 +200,7 @@ MAIN_NAMESPACE(shortest_palindrome)
 MAIN_NAMESPACE(kth_largest_element_in_an_array)
 
 int main(int argc, const char *argv[]) {
-    return kth_largest_element_in_an_array::main(argc, argv);
+    return largest_number::main(argc, argv);
 }
 
 
