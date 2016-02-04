@@ -198,9 +198,10 @@ MAIN_NAMESPACE(word_search_ii)
 MAIN_NAMESPACE(house_robber_ii)
 MAIN_NAMESPACE(shortest_palindrome)
 MAIN_NAMESPACE(kth_largest_element_in_an_array)
+MAIN_NAMESPACE(combination_sum_iii)
 
 int main(int argc, const char *argv[]) {
-    return largest_number::main(argc, argv);
+    return combination_sum_iii::main(argc, argv);
 }
 
 
