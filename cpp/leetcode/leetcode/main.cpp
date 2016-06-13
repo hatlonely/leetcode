@@ -200,9 +200,10 @@ MAIN_NAMESPACE(shortest_palindrome)
 MAIN_NAMESPACE(kth_largest_element_in_an_array)
 MAIN_NAMESPACE(combination_sum_iii)
 MAIN_NAMESPACE(contains_duplicate)
+MAIN_NAMESPACE(the_skyline_problem)
 
 int main(int argc, const char *argv[]) {
-    return contains_duplicate::main(argc, argv);
+    return the_skyline_problem::main(argc, argv);
 }
 
 
