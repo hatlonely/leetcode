@@ -22,12 +22,12 @@ class Solution(object):
             if ch not in chars:
                 chars.add(ch)
             else:
-                length = len(chars) if length < len(chars) else length
+                length = max(length, len(chars))
                 while s[index] != ch:
                     chars.remove(s[index])
                     index += 1
                 index += 1
-        length = len(chars) if length < len(chars) else length
+        length = max(length, len(chars))
         return length
 
 
