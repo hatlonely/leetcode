@@ -1,0 +1,13 @@
+third/
+bin/
+pkg/
+log/
+src/github.com/
+src/golang.org/
+src/google.golang.org/
+src/gitlab.mobvista.com/
+src/gopkg.in/
+src/proto/
+.idea/
+output/
+data/
