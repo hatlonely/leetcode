@@ -8,8 +8,7 @@ import (
 func twoSum(nums []int, target int) []int {
 	numIdxMap := map[int]int{}
 
-	for i := 0; i < len(nums); i++ {
-		num := nums[i]
+	for i, num := range nums {
 		if idx, ok := numIdxMap[target-num]; ok {
 			return []int{idx, i}
 		}
@@ -20,15 +19,16 @@ func twoSum(nums []int, target int) []int {
 }
 
 func main() {
-	for _, item := range []struct {
+	for _, unit := range []struct {
 		nums   []int
 		target int
 		twoSum []int
 	}{
 		{[]int{2, 7, 11, 15}, 9, []int{0, 1}},
+		{[]int{3, 2, 7}, 6, nil},
 	} {
-		if !reflect.DeepEqual(twoSum(item.nums, item.target), item.twoSum) {
-			fmt.Printf("twoSum(%v, %v) != %v", item.nums, item.target, item.twoSum)
+		if target := twoSum(unit.nums, unit.target); !reflect.DeepEqual(target, unit.twoSum) {
+			fmt.Printf("twoSum(%v, %v) = %v != %v", unit.nums, unit.target, target, unit.twoSum)
 		}
 	}
 }

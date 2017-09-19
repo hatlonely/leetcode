@@ -86,13 +86,7 @@ function codegen() {
 
 function build() {
     for f in $(\ls src/main); do
-        if [[ ${f} == 'version.go' ]]; then
-            continue
-        fi
-        go build -ldflags "-X 'main.Version=version:  $(git describe --tags) [git describe --tags]
-hashcode: $(git rev-parse HEAD) [git rev-parse HEAD]
-datetime: $(date '+%Y-%m-%d %H:%M:%S') [date]
-hostname: $(hostname) [hostname]'" src/main/${f} src/main/version.go
+        go build src/main/${f}
         if [[ $? != 0 ]]; then
             warn "build src/main/${f} failed." && return 255
         fi
