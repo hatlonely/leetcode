@@ -18,19 +18,16 @@ func min(a, b int) int {
 	}
 }
 
-func maxAreaRecursive(height *[]int, l int) (area int) {
+func maxArea(height []int) (area int) {
+	l := len(height)
 	if l <= 1 {
 		return 0
 	}
-	for i := range *height {
-		area = max(area, (l-i-1)*min((*height)[i], (*height)[l-1]))
+	for i := range height {
+		area = max(area, (l-i-1)*min(height[i], height[l-1]))
 	}
 
-	return max(area, maxAreaRecursive(height, l-1))
-}
-
-func maxArea(height []int) (area int) {
-	return maxAreaRecursive(&height, len(height))
+	return max(area, maxArea(height[0:l-1]))
 }
 
 func main() {
