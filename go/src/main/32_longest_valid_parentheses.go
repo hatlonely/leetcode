@@ -17,7 +17,7 @@ func longestValidParentheses(str string) int {
 	}
 
 	maxLen := 0
-	for i := 0; i < strlen; i++ {
+	for i := 0; i < strlen; {
 		for i < strlen && nums[i] > nums[i+1] {
 			i++
 		}
@@ -31,10 +31,9 @@ func longestValidParentheses(str string) int {
 			}
 			length += 1
 		}
-		i--
 	}
 
-	for i := strlen; i > 0; i-- {
+	for i := strlen; i > 0; {
 		for i > 0 && nums[i] > nums[i-1] {
 			i--
 		}
@@ -48,7 +47,6 @@ func longestValidParentheses(str string) int {
 			}
 			length += 1
 		}
-		i++
 	}
 
 	return maxLen
